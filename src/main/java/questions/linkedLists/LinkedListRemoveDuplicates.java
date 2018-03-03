@@ -1,4 +1,4 @@
-package challenges.linkedLists;
+package questions.linkedLists;
 
 
 import java.util.HashSet;

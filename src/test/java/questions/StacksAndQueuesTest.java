@@ -1,10 +1,10 @@
-package challenges;
+package questions;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import challenges.stacksAndQueues.MinStack;
-import challenges.stacksAndQueues.StackOfPlates;
+import questions.stacksAndQueues.MinStack;
+import questions.stacksAndQueues.StackOfPlates;
 
 public class StacksAndQueuesTest {
 
@@ -18,7 +18,7 @@ public class StacksAndQueuesTest {
     @Test
     public void MinStack() {
         // Challenge: Design a stack which, in addition to push and pop, has a function
-        // 'min' which returns the minium element? Push, pop and min should all operate in
+        // 'min' which returns the minimum element? Push, pop and min should all operate in
         // O(1) time.
 
         minStack.push(5);

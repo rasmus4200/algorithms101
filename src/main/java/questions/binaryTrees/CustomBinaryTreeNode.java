@@ -1,4 +1,4 @@
-package challenges.binaryTrees;
+package questions.binaryTrees;
 
 public class CustomBinaryTreeNode {
 

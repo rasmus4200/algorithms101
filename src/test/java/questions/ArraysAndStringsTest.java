@@ -1,6 +1,6 @@
-package challenges;
+package questions;
 
-import challenges.arraysAndStrings.*;
+import questions.arraysAndStrings.*;
 import datastructures.PrettyPrinter;
 import org.junit.Assert;
 import org.junit.Before;
@@ -57,7 +57,7 @@ public class ArraysAndStringsTest {
     }
 
     @Test
-    public void Palidromes() {
+    public void Palindromes() {
         // Challenge: Detect if a given string is a palindrome.
         // A palindrome is a word that can be spelt the same way forwards and backwards.
 
@@ -94,12 +94,9 @@ public class ArraysAndStringsTest {
         Assert.assertEquals("z3", compressor.compress("zzz"));
     }
 
-    // TODO: Have a section dedicated to grids before you start arrays and string
-    // challenges - call it the grid
-
     @Test
     public void ZeroOutMatrixRowsAndColumnsSolution1() {
-        // Challenge: Given an nxm matrix, write an algorithm such that if an element is an
+        // Challenge: Given an nxm matrix, write an algorithm such that if an element in an
         // NxM matrix is zero, its entire row and column are set to 0.
 
         // Solution: This is an example divide and conquer. Here We can divide the problem

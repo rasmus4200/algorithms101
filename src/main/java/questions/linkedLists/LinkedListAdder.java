@@ -1,6 +1,5 @@
-package challenges.linkedLists;
+package questions.linkedLists;
 
-import datastructures.LinkedList;
 import datastructures.Stack;
 
 public class LinkedListAdder {

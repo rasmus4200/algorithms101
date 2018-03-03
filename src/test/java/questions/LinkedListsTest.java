@@ -1,6 +1,6 @@
-package challenges;
+package questions;
 
-import challenges.linkedLists.*;
+import questions.linkedLists.*;
 import datastructures.Stack;
 import org.junit.Assert;
 import org.junit.Before;
@@ -36,7 +36,7 @@ public class LinkedListsTest {
         // Challenge: You have two numbers represented by a linked list.
         // Each node represents a single digit, in reverse order, such that the
         // 1's digit is at the head. Write a function that adds the two numbers
-        // and returns the sam as a linked list.
+        // and returns the sum as a linked list.
 
         // Example
         // Input:  (8 -> 2 -> 5) + (4 -> 9 -> 2). That is 528 + 294.
@@ -67,7 +67,7 @@ public class LinkedListsTest {
 
     @Test
     public void Palindrome() {
-        // Challenge: Write an algorithm to determine whether a string is a palidrome.
+        // Challenge: Write an algorithm to determine whether a string is a palindrome.
 
         Assert.assertTrue(palindrome.isPalindrome("aba"));
         Assert.assertTrue(palindrome.isPalindrome("radar"));

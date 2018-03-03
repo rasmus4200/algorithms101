@@ -1,4 +1,4 @@
-package challenges.linkedLists;
+package questions.linkedLists;
 
 public class Node {
     int data;

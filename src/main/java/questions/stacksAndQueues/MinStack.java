@@ -1,6 +1,4 @@
-package challenges.stacksAndQueues;
-
-import java.util.EmptyStackException;
+package questions.stacksAndQueues;
 
 // Soln:
 //

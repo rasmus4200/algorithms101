@@ -1,4 +1,4 @@
-package challenges.arraysAndStrings;
+package questions.arraysAndStrings;
 
 import java.util.Arrays;
 
