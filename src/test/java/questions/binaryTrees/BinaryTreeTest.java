@@ -1,4 +1,4 @@
-package questions;
+package questions.binaryTrees;
 
 import questions.binaryTrees.*;
 import org.junit.Assert;
