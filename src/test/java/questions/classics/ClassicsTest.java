@@ -1,22 +1,22 @@
 package questions.classics;
 
-import datastructures.PrettyPrinter;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import questions.arraysAndStrings.*;
-
-import java.util.ArrayList;
 
 public class ClassicsTest {
 
     private FizzBuzz fizzBuzz;
     private RansomNote ransomNote;
+    private CaesarCipherSimple caesarSimple;
+    private CaesarCipherAdvanced caesarAdvanced;
 
     @Before
     public void SetUp() {
         fizzBuzz = new FizzBuzz();
         ransomNote = new RansomNote();
+        caesarSimple = new CaesarCipherSimple();
+        caesarAdvanced = new CaesarCipherAdvanced();
     }
 
     @Test
@@ -44,6 +44,47 @@ public class ClassicsTest {
         Assert.assertTrue(ransomNote.canWrite("Pay me $1000", "ayPem0001$"));
 
         Assert.assertFalse(ransomNote.canWrite("Pay", "Pa"));
+    }
+
+    @Test
+    public void CaesarCipher() {
+        // Challenge: Implement a Caesar Cipher.
+        //
+        // A Caesar Cipher is a basic encryption algorithm that takes all the letters message
+        // and encrypts them by shifting them over some fixed amount.
+        //
+        // For example a Caesar Cipher of x3 would map the alphabet like this:
+        //
+        // Plain:    ABCDEFGHIJKLMNOPQRSTUVWXYZ
+        // Cipher:   XYZABCDEFGHIJKLMNOPQRSTUVW
+        //
+        // And the following text like this:
+        //
+        // Plaintext:  THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+        // Ciphertext: QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD
+        //
+        // Write an encrypt and decrypt method using an offset of three
+        //
+
+        // First attempt...
+
+        Assert.assertEquals("XYZ", caesarSimple.encrypt("ABC"));
+        Assert.assertEquals("X Y Z", caesarSimple.encrypt("A B C"));
+        Assert.assertEquals("QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD", caesarSimple.encrypt("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"));
+
+        Assert.assertEquals("ABC", caesarSimple.decrypt("XYZ"));
+
+        // Second attempt (after some Googling...)
+
+        Assert.assertEquals("DEF", caesarAdvanced.encrypt("ABC", 3));
+        Assert.assertEquals("D E F", caesarAdvanced.encrypt("A B C", 3));
+        Assert.assertEquals("WKH TXLFN EURZQ IRA MXPSV RYHU WKH ODCB GRJ", caesarAdvanced.encrypt("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG", 3));
+
+        Assert.assertEquals("A B C", caesarAdvanced.decrypt("D E F", 3));
+
+        // Note: The reason why the first attempt and second attempt have different expectations (ABC vs DEF)
+        // is because the second attempt shifts the other way. I left the examples as is so they match wikiPedia examples
+        // and to make the more advanced algorithm simpler and easier to understand.
     }
 
 }
