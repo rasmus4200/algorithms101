@@ -10,6 +10,7 @@ public class ClassicsTest {
     private RansomNote ransomNote;
     private CaesarCipherSimple caesarSimple;
     private CaesarCipherAdvanced caesarAdvanced;
+    private SieveOfEratosthenes sieveOfEratosthenes;
 
     @Before
     public void SetUp() {
@@ -17,6 +18,7 @@ public class ClassicsTest {
         ransomNote = new RansomNote();
         caesarSimple = new CaesarCipherSimple();
         caesarAdvanced = new CaesarCipherAdvanced();
+        sieveOfEratosthenes = new SieveOfEratosthenes();
     }
 
     @Test
@@ -85,6 +87,16 @@ public class ClassicsTest {
         // Note: The reason why the first attempt and second attempt have different expectations (ABC vs DEF)
         // is because the second attempt shifts the other way. I left the examples as is so they match wikiPedia examples
         // and to make the more advanced algorithm simpler and easier to understand.
+    }
+
+    @Test
+    public void SieveOfEratosthenes() {
+        // Challenge: Given a number n, print all primes smaller than or equal to n (assume n < 30).
+        //
+        // Hint: https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+        //
+
+        sieveOfEratosthenes.print(30);
     }
 
 }
