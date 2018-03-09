@@ -2,6 +2,13 @@ package questions.arraysAndStrings;
 
 public class UniqueCharacterDetector {
 
+    // There are lots of ways we could solve this:
+    //  - HashMap where we store every character and a boolean on whether found
+    //  - An array that counts the number of times a character occurs
+    //
+    // But as an example of of how optimized and tight we can make this, checkout this solution below
+    // to see how a simple array, that stores booleans, gives us everything we need.
+
     public boolean isUnique(String text) {
         // Create an array representing all unique 128 characters in ASCII.
         // Set a flag to true for each letter.
@@ -21,5 +28,6 @@ public class UniqueCharacterDetector {
         }
         return true;
     }
+
 
 }

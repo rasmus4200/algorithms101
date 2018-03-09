@@ -26,7 +26,7 @@ public class MinStack {
     private class Node {
 
         private int data;
-        private int min;
+        private int min; // track here
         private Node next;
 
         private Node (int data, int min) {
@@ -40,6 +40,7 @@ public class MinStack {
     public void push(int data) {
         int min = data;
 
+        // check for a min every time we add a node
         if (head != null) {
             min = Math.min(data, min());
         }

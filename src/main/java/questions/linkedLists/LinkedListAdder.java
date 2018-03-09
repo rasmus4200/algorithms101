@@ -40,6 +40,7 @@ public class LinkedListAdder {
         Stack forward = new Stack();
         Stack backward = new Stack();
 
+        // Keep slicing off the digits by dividing by 10 and pushing the remainder
         while (number > 0) {
             forward.push(number % 10);
             number = number / 10;

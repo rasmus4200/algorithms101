@@ -66,17 +66,6 @@ public class LinkedListsTest {
     }
 
     @Test
-    public void Palindrome() {
-        // Challenge: Write an algorithm to determine whether a string is a palindrome.
-
-        Assert.assertTrue(palindrome.isPalindrome("aba"));
-        Assert.assertTrue(palindrome.isPalindrome("radar"));
-        Assert.assertTrue(palindrome.isPalindrome("abba"));
-        Assert.assertFalse(palindrome.isPalindrome("moon"));
-        Assert.assertFalse(palindrome.isPalindrome("cat"));
-    }
-
-    @Test
     public void LoopDetection() {
         // Challenge: Given a circular linked list, implement an algorithm determines
         // whether the linked list has a circular loop

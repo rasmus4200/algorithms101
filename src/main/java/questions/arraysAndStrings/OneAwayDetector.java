@@ -6,8 +6,8 @@ public class OneAwayDetector {
 
         // Let's break this down.
         // If the strings are the same length, they are one replacement away
-        // If they strings differ by one, they are either an insert or replace away
-        // If they are more than one away
+        // If the strings differ by one,       they may be one edit or insert away
+        // If the strings differ by one less,  they may be one edit or insert away
 
         if (first.length() == second.length()) {
             return OneEditReplace(first, second);
@@ -47,12 +47,12 @@ public class OneAwayDetector {
     private boolean OneEditReplace(String s1, String s2) {
         boolean foundDifference = false;
         for (int i = 0; i < s1.length(); i++) {
-            if (foundDifference) {
-                return false;
-            }
             if (s1.charAt(i) != s2.charAt(i)) {
-                foundDifference = true;
+                if (foundDifference) {
+                    return false;
+                }
             }
+            foundDifference = true;
         }
         return true;
     }
