@@ -1,4 +1,4 @@
-package questions;
+package questions.linkedLists;
 
 import questions.linkedLists.*;
 import datastructures.Stack;

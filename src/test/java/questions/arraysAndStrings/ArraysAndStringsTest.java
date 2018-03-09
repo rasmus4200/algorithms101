@@ -1,4 +1,4 @@
-package questions;
+package questions.arraysAndStrings;
 
 import questions.arraysAndStrings.*;
 import datastructures.PrettyPrinter;

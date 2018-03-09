@@ -1,4 +1,4 @@
-package questions;
+package questions.stacksAndQueues;
 
 import org.junit.Assert;
 import org.junit.Before;
