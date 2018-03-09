@@ -1,7 +1,5 @@
 package questions.classics;
 
-import java.util.HashMap;
-
 public class CaesarCipherAdvanced {
 
     //
@@ -10,6 +8,9 @@ public class CaesarCipherAdvanced {
     // E(x) = (x + n) mod 26
     // D(x) = (x - n) mod 26
     //
+    // x = letter
+    // n = offset
+
     // What these equations basically say is, you can take any given letter, shift it by it's offset, and then
     // modulus 26 that result (25 letters in the alphabet).
     //
@@ -36,7 +37,7 @@ public class CaesarCipherAdvanced {
             char replaceVal = ' ';
 
             if (charToEncrypt != ' ') {
-                int x = ALPHABET.indexOf(plainText.charAt(i));
+                int x = ALPHABET.indexOf(charToEncrypt);
                 int keyVal = (n + x) % 26;
                 replaceVal = ALPHABET.charAt(keyVal);
             }
@@ -57,7 +58,7 @@ public class CaesarCipherAdvanced {
             char replaceVal = ' ';
 
             if (charToDecrypt != ' ') {
-                int x = ALPHABET.indexOf(cipherText.charAt(i));
+                int x = ALPHABET.indexOf(charToDecrypt);
                 int keyVal = (x - n) % 26;
 
                 if (keyVal < 0)
@@ -74,6 +75,4 @@ public class CaesarCipherAdvanced {
         return plainText;
     }
 
-    // For an example of how to handle uppercase & lowercase:
-    // https://www.geeksforgeeks.org/caesar-cipher/
 }

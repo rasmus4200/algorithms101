@@ -5,13 +5,13 @@ public class SieveOfEratosthenes {
     public void print(int upperBound) {
         int upperBoundSquareRoot = (int) Math.sqrt(upperBound);
 
-        // assume everything initially is a prime (even though false)
+        // isComposite means not prime
         boolean[] isComposite = new boolean[upperBound + 1];
 
         // going from prime 2 up to sqrt n
         for (int m = 2; m <= upperBoundSquareRoot; m++) {
 
-            // if is marked as prime
+            // if prime
             if (!isComposite[m]) {
                 // Print it...
                 System.out.print(m + " ");

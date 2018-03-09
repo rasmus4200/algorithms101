@@ -4,13 +4,14 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ClassicsTest {
+public class   ClassicsTest {
 
     private FizzBuzz fizzBuzz;
     private RansomNote ransomNote;
     private CaesarCipherSimple caesarSimple;
     private CaesarCipherAdvanced caesarAdvanced;
     private SieveOfEratosthenes sieveOfEratosthenes;
+    private Reverser reverser;
 
     @Before
     public void SetUp() {
@@ -19,6 +20,7 @@ public class ClassicsTest {
         caesarSimple = new CaesarCipherSimple();
         caesarAdvanced = new CaesarCipherAdvanced();
         sieveOfEratosthenes = new SieveOfEratosthenes();
+        reverser = new Reverser();
     }
 
     @Test
@@ -27,6 +29,13 @@ public class ClassicsTest {
         // But for multiples of three print 'Fizz' instead of the number.
         // And for multiples of five  print 'Buzz'.
         // For numbers which are multiples of both three and five print 'FizzBuzz'.
+        //
+        // Example
+        // 1
+        // 2
+        // Fizz
+        // 4
+        // Buzz
 
         fizzBuzz.print();
     }
@@ -65,7 +74,7 @@ public class ClassicsTest {
         // Plaintext:  THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
         // Ciphertext: QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD
         //
-        // Write an encrypt and decrypt method using an offset of three
+        // Write an encrypt and decrypt method of a Caesar Cipher using an offset of 3
         //
 
         // First attempt...
@@ -97,6 +106,20 @@ public class ClassicsTest {
         //
 
         sieveOfEratosthenes.print(30);
+    }
+
+    @Test
+    public void Reverse() {
+        // Challenge: Given a string, return it's reverse.
+        // "abc" => "cba"
+
+        // Soln1
+        Assert.assertEquals("olleH", reverser.soln1("Hello"));
+        Assert.assertEquals("maS", reverser.soln1("Sam"));
+
+        // Soln2
+        Assert.assertEquals("norT", reverser.soln2("Tron"));
+        Assert.assertEquals("nnylF", reverser.soln2("Flynn"));
     }
 
 }

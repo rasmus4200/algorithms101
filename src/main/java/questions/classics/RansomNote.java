@@ -23,24 +23,6 @@ public class RansomNote {
         return canWriteRansom(noteMap, letterMap);
     }
 
-    private boolean canWriteRansom(HashMap<String, Integer> noteMap, HashMap<String, Integer> letterMap) {
-        for (String key : noteMap.keySet()) {
-
-            if (!letterMap.containsKey(key)) {
-                return false;
-            }
-
-            int noteCount = noteMap.get(key);
-            int letterCount = letterMap.get(key);
-
-            if (letterCount < noteCount) {
-                return false;
-            }
-
-        }
-        return true;
-    }
-
     private HashMap<String, Integer> map(String text) {
         HashMap<String, Integer> map = new HashMap<String, Integer>();
         char[] characters = text.toCharArray();
@@ -62,4 +44,23 @@ public class RansomNote {
 
         return map;
     }
+
+    private boolean canWriteRansom(HashMap<String, Integer> noteMap, HashMap<String, Integer> letterMap) {
+        for (String key : noteMap.keySet()) {
+
+            if (!letterMap.containsKey(key)) {
+                return false;
+            }
+
+            int noteCount = noteMap.get(key);
+            int letterCount = letterMap.get(key);
+
+            if (letterCount < noteCount) {
+                return false;
+            }
+
+        }
+        return true;
+    }
+
 }
