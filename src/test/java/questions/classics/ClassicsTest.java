@@ -11,7 +11,8 @@ public class   ClassicsTest {
     private CaesarCipherSimple caesarSimple;
     private CaesarCipherAdvanced caesarAdvanced;
     private SieveOfEratosthenes sieveOfEratosthenes;
-    private Reverser reverser;
+    private StringReverser stringReverser;
+    private IntReverser intReverser;
 
     @Before
     public void SetUp() {
@@ -20,7 +21,8 @@ public class   ClassicsTest {
         caesarSimple = new CaesarCipherSimple();
         caesarAdvanced = new CaesarCipherAdvanced();
         sieveOfEratosthenes = new SieveOfEratosthenes();
-        reverser = new Reverser();
+        stringReverser = new StringReverser();
+        intReverser = new IntReverser();
     }
 
     @Test
@@ -109,17 +111,27 @@ public class   ClassicsTest {
     }
 
     @Test
-    public void Reverse() {
+    public void ReverseString() {
         // Challenge: Given a string, return it's reverse.
         // "abc" => "cba"
 
         // Soln1
-        Assert.assertEquals("olleH", reverser.soln1("Hello"));
-        Assert.assertEquals("maS", reverser.soln1("Sam"));
+        Assert.assertEquals("olleH", stringReverser.soln1("Hello"));
+        Assert.assertEquals("maS", stringReverser.soln1("Sam"));
 
         // Soln2
-        Assert.assertEquals("norT", reverser.soln2("Tron"));
-        Assert.assertEquals("nnylF", reverser.soln2("Flynn"));
+        Assert.assertEquals("norT", stringReverser.soln2("Tron"));
+        Assert.assertEquals("nnylF", stringReverser.soln2("Flynn"));
+    }
+
+    @Test
+    public void ReverseInt() {
+        // Challenge: Given an int, reverse its digits.
+        // x = 123, return 321
+        // x= -123, return -321
+
+        Assert.assertEquals(321, intReverser.reverse(123));
+        Assert.assertEquals(-321, intReverser.reverse(-123));
     }
 
 }
