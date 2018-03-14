@@ -13,6 +13,7 @@ public class   ClassicsTest {
     private SieveOfEratosthenes sieveOfEratosthenes;
     private StringReverser stringReverser;
     private IntReverser intReverser;
+    private Anagram anagram;
 
     @Before
     public void SetUp() {
@@ -23,6 +24,7 @@ public class   ClassicsTest {
         sieveOfEratosthenes = new SieveOfEratosthenes();
         stringReverser = new StringReverser();
         intReverser = new IntReverser();
+        anagram = new Anagram();
     }
 
     @Test
@@ -132,6 +134,20 @@ public class   ClassicsTest {
 
         Assert.assertEquals(321, intReverser.reverse(123));
         Assert.assertEquals(-321, intReverser.reverse(-123));
+    }
+
+    @Test
+    public void Anagram() {
+        // Challenge: Given two strings, write an algorithm to detect whether one word is an anagram of the other.
+        // An anagram is a word that can be made by changing the order of the letters in another word.
+        //
+        // For example:
+        // tar => rat
+        // state => taste
+
+        Assert.assertTrue(anagram.isAnagram("arc", "car"));
+        Assert.assertTrue(anagram.isAnagram("night", "thing"));
+        Assert.assertFalse(anagram.isAnagram("cat", "dog"));
     }
 
 }
