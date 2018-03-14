@@ -14,6 +14,7 @@ public class   ClassicsTest {
     private StringReverser stringReverser;
     private IntReverser intReverser;
     private Anagram anagram;
+    private CharacterCount characterCount;
 
     @Before
     public void SetUp() {
@@ -25,6 +26,7 @@ public class   ClassicsTest {
         stringReverser = new StringReverser();
         intReverser = new IntReverser();
         anagram = new Anagram();
+        characterCount = new CharacterCount();
     }
 
     @Test
@@ -148,6 +150,21 @@ public class   ClassicsTest {
         Assert.assertTrue(anagram.isAnagram("arc", "car"));
         Assert.assertTrue(anagram.isAnagram("night", "thing"));
         Assert.assertFalse(anagram.isAnagram("cat", "dog"));
+    }
+
+    @Test
+    public void CharacterCount() {
+        // Challenge: Given a string, return the character that occurs most often in the string.
+        // In the event of a tie, return the larger character.
+        //
+        // For example:
+        // abbbbc => b
+        // abcxxxyyyzzz => z
+
+        Assert.assertEquals("b", characterCount.maxChar("abbbbc"));
+        Assert.assertEquals("z", characterCount.maxChar("shazzzzzam!"));
+
+        // What about a tie?
     }
 
 }
