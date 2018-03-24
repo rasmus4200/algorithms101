@@ -147,9 +147,15 @@ public class   ClassicsTest {
         // tar => rat
         // state => taste
 
-        Assert.assertTrue(anagram.isAnagram("arc", "car"));
-        Assert.assertTrue(anagram.isAnagram("night", "thing"));
-        Assert.assertFalse(anagram.isAnagram("cat", "dog"));
+        // Soln1
+        Assert.assertTrue(anagram.isAnagram1("arc", "car"));
+        Assert.assertTrue(anagram.isAnagram1("night", "thing"));
+        Assert.assertFalse(anagram.isAnagram1("cat", "dog"));
+
+        // Soln2
+        Assert.assertTrue(anagram.isAnagram2("arc", "car"));
+        Assert.assertTrue(anagram.isAnagram2("night", "thing"));
+        Assert.assertFalse(anagram.isAnagram2("cat", "dog"));
     }
 
     @Test
