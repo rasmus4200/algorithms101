@@ -2,7 +2,7 @@ package questions.classics;
 
 import java.util.HashMap;
 
-public class Reverser {
+public class StringReverser {
 
     // Soln1: Easy - use StringBuilder
 

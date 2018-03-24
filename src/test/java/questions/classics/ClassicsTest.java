@@ -11,7 +11,10 @@ public class   ClassicsTest {
     private CaesarCipherSimple caesarSimple;
     private CaesarCipherAdvanced caesarAdvanced;
     private SieveOfEratosthenes sieveOfEratosthenes;
-    private Reverser reverser;
+    private StringReverser stringReverser;
+    private IntReverser intReverser;
+    private Anagram anagram;
+    private CharacterCount characterCount;
 
     @Before
     public void SetUp() {
@@ -20,7 +23,10 @@ public class   ClassicsTest {
         caesarSimple = new CaesarCipherSimple();
         caesarAdvanced = new CaesarCipherAdvanced();
         sieveOfEratosthenes = new SieveOfEratosthenes();
-        reverser = new Reverser();
+        stringReverser = new StringReverser();
+        intReverser = new IntReverser();
+        anagram = new Anagram();
+        characterCount = new CharacterCount();
     }
 
     @Test
@@ -99,20 +105,6 @@ public class   ClassicsTest {
     }
 
     @Test
-    public void Reverse() {
-        // Challenge: Given a string, return it's reverse.
-        // "abc" => "cba"
-
-        // Soln1
-        Assert.assertEquals("olleH", reverser.soln1("Hello"));
-        Assert.assertEquals("maS", reverser.soln1("Sam"));
-
-        // Soln2
-        Assert.assertEquals("norT", reverser.soln2("Tron"));
-        Assert.assertEquals("nnylF", reverser.soln2("Flynn"));
-    }
-
-    @Test
     public void SieveOfEratosthenes() {
         // Challenge: Given a number n, print all primes smaller than or equal to n (assume n < 30).
         //
@@ -120,6 +112,59 @@ public class   ClassicsTest {
         //
 
         sieveOfEratosthenes.print(30);
+    }
+
+    @Test
+    public void ReverseString() {
+        // Challenge: Given a string, return it's reverse.
+        // "abc" => "cba"
+
+        // Soln1
+        Assert.assertEquals("olleH", stringReverser.soln1("Hello"));
+        Assert.assertEquals("maS", stringReverser.soln1("Sam"));
+
+        // Soln2
+        Assert.assertEquals("norT", stringReverser.soln2("Tron"));
+        Assert.assertEquals("nnylF", stringReverser.soln2("Flynn"));
+    }
+
+    @Test
+    public void ReverseInt() {
+        // Challenge: Given an int, reverse its digits.
+        // x = 123, return 321
+        // x= -123, return -321
+
+        Assert.assertEquals(321, intReverser.reverse(123));
+        Assert.assertEquals(-321, intReverser.reverse(-123));
+    }
+
+    @Test
+    public void Anagram() {
+        // Challenge: Given two strings, write an algorithm to detect whether one word is an anagram of the other.
+        // An anagram is a word that can be made by changing the order of the letters in another word.
+        //
+        // For example:
+        // tar => rat
+        // state => taste
+
+        Assert.assertTrue(anagram.isAnagram("arc", "car"));
+        Assert.assertTrue(anagram.isAnagram("night", "thing"));
+        Assert.assertFalse(anagram.isAnagram("cat", "dog"));
+    }
+
+    @Test
+    public void CharacterCount() {
+        // Challenge: Given a string, return the character that occurs most often in the string.
+        // In the event of a tie, return the larger character.
+        //
+        // For example:
+        // abbbbc => b
+        // abcxxxyyyzzz => z
+
+        Assert.assertEquals("b", characterCount.maxChar("abbbbc"));
+        Assert.assertEquals("z", characterCount.maxChar("shazzzzzam!"));
+
+        // What about a tie?
     }
 
 }
