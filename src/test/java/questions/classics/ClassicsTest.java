@@ -99,16 +99,6 @@ public class   ClassicsTest {
     }
 
     @Test
-    public void SieveOfEratosthenes() {
-        // Challenge: Given a number n, print all primes smaller than or equal to n (assume n < 30).
-        //
-        // Hint: https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
-        //
-
-        sieveOfEratosthenes.print(30);
-    }
-
-    @Test
     public void Reverse() {
         // Challenge: Given a string, return it's reverse.
         // "abc" => "cba"
@@ -120,6 +110,16 @@ public class   ClassicsTest {
         // Soln2
         Assert.assertEquals("norT", reverser.soln2("Tron"));
         Assert.assertEquals("nnylF", reverser.soln2("Flynn"));
+    }
+
+    @Test
+    public void SieveOfEratosthenes() {
+        // Challenge: Given a number n, print all primes smaller than or equal to n (assume n < 30).
+        //
+        // Hint: https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+        //
+
+        sieveOfEratosthenes.print(30);
     }
 
 }

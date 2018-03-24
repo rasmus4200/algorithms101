@@ -21,11 +21,11 @@ public class Reverser {
         char[] chars = text.toCharArray();
 
         // Initialize pointers
-        int left = 0;
+        int left;
         int right = text.length() - 1;
 
         // Loop through swapping left and right until we hit the middle
-        for (int i = 0; left < right; left++, right--) {
+        for (left = 0; left < right; left++, right--) {
             char temp = chars[left];
             chars[left] = chars[right];
             chars[right] = temp;
