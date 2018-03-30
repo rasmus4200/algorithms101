@@ -16,14 +16,11 @@ public class MergeSortTest {
     @Test
     public void Sort() throws Exception {
 
+        //           l                  r
         int arr[] = {4, 7, 14, 1, 3, 9, 17};
 
         int l = 0;              // left pointer
         int r = arr.length - 1; // right pointer
-
-        // l            r
-        // 12 11 13 5 6 7
-        //
 
         mergeSort.sort(arr, l, r);
 

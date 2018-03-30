@@ -6,12 +6,11 @@ public class MergeSort {
     // merge()
     public void sort(int arr[], int l, int r)
     {
+        System.out.println("splitting l r: " + l + " " + r);
         if (l < r)
         {
             // Find the middle point
             int m = (l+r)/2;
-
-            System.out.println("split l m r: " + l + " " + m + " " + r);
 
             // Sort first and second halves
             sort(arr, l, m);
@@ -81,6 +80,9 @@ public class MergeSort {
             j++;
             k++;
         }
+
+        System.out.println("After merge");
+        printArray(arr);
     }
 
     static void printArray(int arr[])
