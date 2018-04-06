@@ -1,4 +1,4 @@
-package questions.stacksAndQueues;
+package challenges.stacksAndQueues;
 
 // Soln:
 // This problem isn't that bad if we just draw it out.

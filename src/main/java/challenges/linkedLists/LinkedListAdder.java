@@ -1,4 +1,4 @@
-package questions.linkedLists;
+package challenges.linkedLists;
 
 import datastructures.Stack;
 

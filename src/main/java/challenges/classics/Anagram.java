@@ -1,4 +1,4 @@
-package questions.classics;
+package challenges.classics;
 
 import java.util.Arrays;
 import java.util.HashMap;

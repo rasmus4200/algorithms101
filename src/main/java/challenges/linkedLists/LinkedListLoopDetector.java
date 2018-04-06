@@ -1,4 +1,4 @@
-package questions.linkedLists;
+package challenges.linkedLists;
 
 public class LinkedListLoopDetector {
 

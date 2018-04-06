@@ -1,4 +1,4 @@
-package questions.classics;
+package challenges.classics;
 
 public class FizzBuzz {
 

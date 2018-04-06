@@ -1,4 +1,4 @@
-package questions.linkedLists;
+package challenges.linkedLists;
 
 
 import java.util.Stack;

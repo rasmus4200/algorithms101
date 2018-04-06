@@ -1,4 +1,4 @@
-package questions.arraysAndStrings;
+package challenges.arraysAndStrings;
 
 public class URLConverter {
 

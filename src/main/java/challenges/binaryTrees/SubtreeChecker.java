@@ -1,4 +1,4 @@
-package questions.binaryTrees;
+package challenges.binaryTrees;
 
 public class SubtreeChecker {
 

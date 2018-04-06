@@ -1,4 +1,4 @@
-package questions.stacksAndQueues;
+package challenges.stacksAndQueues;
 
 // Soln:
 //
