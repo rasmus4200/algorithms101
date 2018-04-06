@@ -1,6 +1,5 @@
-package questions.binaryTrees;
+package challenges.binaryTrees;
 
-import questions.binaryTrees.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

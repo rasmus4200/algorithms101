@@ -1,6 +1,5 @@
-package questions.linkedLists;
+package challenges.linkedLists;
 
-import questions.linkedLists.*;
 import datastructures.Stack;
 import org.junit.Assert;
 import org.junit.Before;

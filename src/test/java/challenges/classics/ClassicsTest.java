@@ -1,4 +1,4 @@
-package questions.classics;
+package challenges.classics;
 
 import org.junit.Assert;
 import org.junit.Before;

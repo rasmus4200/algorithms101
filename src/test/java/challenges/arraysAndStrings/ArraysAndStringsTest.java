@@ -1,6 +1,5 @@
-package questions.arraysAndStrings;
+package challenges.arraysAndStrings;
 
-import questions.arraysAndStrings.*;
 import datastructures.PrettyPrinter;
 import org.junit.Assert;
 import org.junit.Before;
