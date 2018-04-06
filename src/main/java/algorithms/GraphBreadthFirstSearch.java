@@ -3,13 +3,12 @@ package algorithms;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public class BreadthFirstSearchGraph {
+public class GraphBreadthFirstSearch {
 
     private int V;   // No. of vertices
-    private LinkedList<Integer> adj[]; //Adjacency Lists
+    private LinkedList<Integer> adj[]; // Adjacency List
 
-    // Constructor
-    BreadthFirstSearchGraph(int v)
+    GraphBreadthFirstSearch(int v)
     {
         V = v;
         adj = new LinkedList[v];
@@ -17,16 +16,17 @@ public class BreadthFirstSearchGraph {
             adj[i] = new LinkedList();
     }
 
-    // Function to add an edge into the graph
-    void addEdge(int v,int w)
+    void addEdge(int v, int edge)
     {
-        adj[v].add(w);
+        adj[v].add(edge);
     }
 
-    // prints BFS traversal from a given source s
+    // Prints BFS traversal from a given source s
     void BFS(int s) {
-        // Mark all the vertices as not visited(By default
-        // set as false)
+
+        // Unlike trees, graphs may contain cycles.
+        // So to prevent circling back and visiting the same vertex twice
+        // we can track with vertices we've visited with this array
         boolean visited[] = new boolean[V];
 
         // Create a queue for BFS
@@ -37,7 +37,7 @@ public class BreadthFirstSearchGraph {
         queue.add(s);
 
         while (queue.size() != 0) {
-            // Dequeue a vertex from queue and print it
+            // Dequeue a vertex from head of queue and print it
             s = queue.poll();
             System.out.print(s + " ");
 
