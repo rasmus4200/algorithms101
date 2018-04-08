@@ -54,43 +54,4 @@ public class DepthFirstSearchTest {
         System.out.println("The DFS traversal of the graph using recursion ");
         dfs.iterativelyFrom(node40);
     }
-
-    @Test
-    public void FindPath() throws Exception {
-        Node node0 = new Node(0);
-        Node node1 = new Node(1);
-        Node node2 = new Node(2);
-        Node node3 = new Node(3);
-        Node node4 = new Node(4);
-        Node node5 = new Node(5);
-        Node node6 = new Node(6);
-        Node node7 = new Node(7);
-
-        node0.addNeighbour(node1);
-        node0.addNeighbour(node3);
-
-        node1.addNeighbour(node0);
-        node1.addNeighbour(node4);
-        node1.addNeighbour(node5);
-
-        node2.addNeighbour(node5);
-        node2.addNeighbour(node7);
-
-        node3.addNeighbour(node0);
-        node3.addNeighbour(node5);
-
-        node4.addNeighbour(node1);
-        node4.addNeighbour(node6);
-
-        node5.addNeighbour(node1);
-        node5.addNeighbour(node3);
-        node5.addNeighbour(node2);
-
-        node6.addNeighbour(node4);
-        node6.addNeighbour(node0);
-
-        node7.addNeighbour(node2);
-
-        dfs.iterativelyFrom(node0);
-    }
 }
