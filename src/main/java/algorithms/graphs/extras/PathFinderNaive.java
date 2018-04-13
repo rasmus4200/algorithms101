@@ -30,27 +30,28 @@ class PathFinderNaive {
     }
 
     void recursivelyFrom(Node node) {
-        Stack currentPath = new Stack<Integer>();
-        recursiveUtils(node, currentPath);
+        Stack tracker = new Stack<Integer>();
+        recursiveUtils(node, tracker);
     }
 
-    void recursiveUtils(Node node, Stack currentPath) {
-        currentPath.add(node);
+    void recursiveUtils(Node node, Stack tracker) {
+        tracker.add(node);
         System.out.print(node.data + " ");
-        System.out.println("Adding " + currentPath);
+        System.out.println("Adding " + tracker);
         node.visited = true;
 
         List<Node> neighbours = node.getNeighbours();
 
         for (Node n : neighbours) {
             if (n != null && !n.visited) {
-                recursiveUtils(n, currentPath);
+                recursiveUtils(n, tracker);
             }
         }
 
+        // check to see if we have exhausted all paths
         if (neighbours.isEmpty() || allNodesVisited(neighbours)) {
             System.out.println("Empty or all visited: Popping " + node.data + " from path");
-            currentPath.pop();
+            tracker.pop();
         }
     }
 
