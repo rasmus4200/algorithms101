@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-class DepthFirstSearch {
+class DepthFirstSearchIterative {
 
     static class Node {
         int data;
         boolean visited;
-        List<Node> neighbours;
+        List<Node> neighbours; // Adjacency list
 
         Node(int data) {
             this.data = data;
@@ -66,7 +66,7 @@ class DepthFirstSearch {
     }
 
 
-    void iterativelyFrom(Node node) {
+    void searchFrom(Node node) {
 
         // Setup the starting node
         Stack<Node> stack = new Stack<Node>();

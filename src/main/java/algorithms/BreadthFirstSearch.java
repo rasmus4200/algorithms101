@@ -41,14 +41,16 @@ class BreadthFirstSearch {
         // Starting visiting our neighbours
         while (!queue.isEmpty()) {
 
+            // Pop the next nearest neighbour off the queue
             Node currentNode = queue.remove();
             System.out.print(currentNode.data + " ");
 
+            // Get their neighbours
             List<Node> neighbours = currentNode.getNeighbours();
 
             // For each neighbour
             for (Node n : neighbours) {
-                // If we haven't visited them before...
+                // We haven't visited yet
                 if (n != null && !n.visited) {
                     // Add to end of queue so we can visit later
                     queue.add(n);

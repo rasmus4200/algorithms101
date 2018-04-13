@@ -21,7 +21,7 @@ public class PathFinderNaiveTest {
         // ask them to fill in
 
         // Todo: Change method signature below to take a from and a to
-        
+
         // Note: Explain how you don't make all edges here bi-directional
         // else there will always be a path and never a dead end
         Node node0 = new Node(0);
