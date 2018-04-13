@@ -1,6 +1,6 @@
-package algorithms;
+package algorithms.graphs.extras;
 
-import algorithms.PathFinderNaive.Node;
+import algorithms.graphs.extras.PathFinderNaive.Node;
 import org.junit.Before;
 import org.junit.Test;
 
