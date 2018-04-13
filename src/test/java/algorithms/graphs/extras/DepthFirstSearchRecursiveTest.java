@@ -1,10 +1,11 @@
-package algorithms;
+package algorithms.graphs.extras;
 
-import algorithms.DepthFirstSearchIterative.Node;
+import algorithms.graphs.extras.DepthFirstSearchRecursive.Node;
+
 import org.junit.Before;
 import org.junit.Test;
 
-public class DepthFirstSearchIterativeTest {
+public class DepthFirstSearchRecursiveTest {
 
     private Node node10;
     private Node node20;
@@ -14,7 +15,7 @@ public class DepthFirstSearchIterativeTest {
     private Node node60;
     private Node node70;
 
-    private DepthFirstSearchIterative dfsIterative;
+    private DepthFirstSearchRecursive dfsRecursive;
 
     @Before
     public void SetUp() throws Exception {
@@ -40,12 +41,13 @@ public class DepthFirstSearchIterativeTest {
         node60.addNeighbour(node70);
         node50.addNeighbour(node70);
 
-        dfsIterative = new DepthFirstSearchIterative();
+        dfsRecursive = new DepthFirstSearchRecursive();
     }
 
     @Test
-    public void DepthFirstSearchIterative() throws Exception {
-        System.out.println("The DFS traversal iteratively:");
-        dfsIterative.searchFrom(node40);
+    public void DepthFirstSearchRecursive() throws Exception {
+        System.out.println("The DFS traversal recursively:");
+        dfsRecursive.searchFrom(node40);
     }
+
 }

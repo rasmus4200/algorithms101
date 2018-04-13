@@ -1,6 +1,6 @@
-package algorithms;
+package algorithms.graphs.extras;
 
-import algorithms.DepthFirstSearchAdjacencyMatrix.Node;
+import algorithms.graphs.extras.DepthFirstSearchAdjacencyMatrix.Node;
 import org.junit.Before;
 import org.junit.Test;
 

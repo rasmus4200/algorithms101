@@ -1,10 +1,10 @@
-package algorithms;
+package algorithms.graphs.extras;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-class DepthFirstSearchIterative {
+class DepthFirstSearchRecursive {
 
     static class Node {
         int data;
@@ -29,7 +29,7 @@ class DepthFirstSearchIterative {
         }
     }
 
-    void recursivelyFrom(Node node) {
+    void searchFrom(Node node) {
         Stack stack = new Stack<Integer>();
         recursiveUtils(node, stack);
     }
@@ -66,7 +66,7 @@ class DepthFirstSearchIterative {
     }
 
 
-    void searchFrom(Node node) {
+    void iterativelyFrom(Node node) {
 
         // Setup the starting node
         Stack<Node> stack = new Stack<Node>();
