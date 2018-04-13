@@ -1,7 +1,6 @@
 package algorithms.graphs.extras;
 
 import algorithms.graphs.extras.DepthFirstSearchRecursive.Node;
-
 import org.junit.Before;
 import org.junit.Test;
 
