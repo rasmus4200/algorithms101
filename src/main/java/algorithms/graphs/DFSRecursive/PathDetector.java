@@ -5,12 +5,13 @@ import java.util.LinkedList;
 import java.util.Stack;
 
 @SuppressWarnings("unchecked")
-class NaivePath
+class PathDetector
 {
     private int V;             // No. of vertices
     private LinkedList[] adj;  // Adjacency List
+    private boolean pathFound;
 
-    NaivePath(int v)
+    PathDetector(int v)
     {
         V = v;
         adj = new LinkedList[v];
@@ -22,26 +23,31 @@ class NaivePath
         adj[v].add(w);
     }
 
-    void DFSUtil(int v, boolean visited[], Stack tracker)
+    void DFSUtil(int from, int to, boolean visited[], Stack tracker)
     {
-        visited[v] = true;
-        tracker.add(v);
-        System.out.print(v + " ");
+        visited[from] = true;
+        tracker.add(from);
+        System.out.print(from + " ");
         System.out.println("Adding = " + tracker);
 
+        // Check for path
+        if (tracker.contains(to)) {
+            pathFound = true;
+        }
+
         // Recur for all the vertices adjacent to this vertex
-        Iterator<Integer> i = adj[v].listIterator();
+        Iterator<Integer> i = adj[from].listIterator();
         while (i.hasNext())
         {
             int n = i.next();
             if (!visited[n])
-                DFSUtil(n, visited, tracker);
+                DFSUtil(n, to, visited, tracker);
         }
 
         // Check to see if we have exhausted all paths
-        Iterator<Integer> j = adj[v].listIterator();
+        Iterator<Integer> j = adj[from].listIterator();
         if (allNeighborsVisited(j, visited)) {
-            System.out.println("All visited: Popping " + v);
+            System.out.println("All visited: Popping " + from);
             tracker.pop();
         }
     }
@@ -57,17 +63,21 @@ class NaivePath
         return true;
     }
 
-    void DFS(int v)
+    boolean hasPath(int from, int to)
     {
         // Mark all the vertices as not visited
         boolean visited[] = new boolean[V];
 
+        // Reset path found
+        pathFound = false;
+
         // Setup our tracker
         Stack tracker = new Stack<Integer>();
 
-        // Call the recursive helper function to print DFS traversal
-        DFSUtil(v, visited, tracker);
+        // Call the recursive helper function to print findPath traversal
+        DFSUtil(from, to, visited, tracker);
+
+        return pathFound;
     }
 
-    // based on https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/
 }

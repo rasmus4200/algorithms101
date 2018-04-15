@@ -16,7 +16,7 @@ public class GraphTest {
         g.addEdge(2, 3);
         g.addEdge(3, 3);
 
-        System.out.println("Depth First Search Recursive:");
+        System.out.println("Depth First Search HasPath:");
 
         g.DFS(2);
     }

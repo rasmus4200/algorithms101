@@ -42,7 +42,7 @@ class Graph
         // Mark all the vertices as not visited
         boolean visited[] = new boolean[V];
 
-        // Call the recursive helper function to print DFS traversal
+        // Call the recursive helper function to print findPath traversal
         DFSUtil(v, visited);
     }
 
