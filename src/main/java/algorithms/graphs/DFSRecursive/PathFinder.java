@@ -46,17 +46,18 @@ class PathFinder
         }
 
         // Check to see if we have exhausted all paths
-        Iterator<Integer> j = adj[from].listIterator();
-        if (allNeighborsVisited(j, visited)) {
+        Iterator<Integer> neighbours = adj[from].listIterator();
+        if (allNeighborsVisited(neighbours, visited)) {
             System.out.println("All visited: Popping " + from);
             tracker.pop();
         }
     }
 
-    private boolean allNeighborsVisited(Iterator<Integer> j, boolean visited[]) {
-        while (j.hasNext())
+    private boolean allNeighborsVisited(Iterator<Integer> neighbors,
+                                        boolean visited[]) {
+        while (neighbors.hasNext())
         {
-            int n = j.next();
+            int n = neighbors.next();
             if (!visited[n]) {
                 return false;
             }

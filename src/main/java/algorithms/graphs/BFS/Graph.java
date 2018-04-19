@@ -3,10 +3,9 @@ package algorithms.graphs.BFS;
 import java.util.*;
 
 class Graph {
-    private int V;   // No. of vertices
-    private LinkedList<Integer> adj[]; //Adjacency Lists
+    private int V; // No. of vertices
+    private LinkedList<Integer> adj[]; // Adjacency Lists
 
-    // Constructor
     Graph(int v) {
         V = v;
         adj = new LinkedList[v];
@@ -14,7 +13,6 @@ class Graph {
             adj[i] = new LinkedList();
     }
 
-    // Function to add an edge into the graph
     void addEdge(int v, int w) {
         adj[v].add(w);
     }
@@ -30,14 +28,16 @@ class Graph {
 
         // Mark the current node as visited and enqueue it
         visited[s] = true;
+//        System.out.println("Starting at " + s);
         queue.add(s);
 
         while (queue.size() != 0) {
             // Dequeue a vertex from queue and print it
             s = queue.poll();
+//            System.out.println("De-queueing...");
             System.out.print(s + " ");
 
-            // Get all adjacent vertices of the dequeued vertex s
+            // Get all adjacent vertices of the de-queued vertex s
             // If a adjacent has not been visited, then mark it
             // visited and enqueue it
             Iterator<Integer> i = adj[s].listIterator();
@@ -45,9 +45,12 @@ class Graph {
                 int n = i.next();
                 if (!visited[n]) {
                     visited[n] = true;
+//                    System.out.println("Queueing " + n);
                     queue.add(n);
                 }
             }
         }
     }
 }
+
+// based on https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
