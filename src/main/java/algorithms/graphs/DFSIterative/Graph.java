@@ -10,8 +10,7 @@ class Graph
     private int V;             // No. of vertices
     private LinkedList[] adj;  // Adjacency List
 
-    Graph(int v)
-    {
+    Graph(int v) {
         V = v;
         adj = new LinkedList[v];
         for (int i=0; i<v; ++i)
