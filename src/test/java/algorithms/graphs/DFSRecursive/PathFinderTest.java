@@ -23,11 +23,22 @@ public class PathFinderTest {
 
         System.out.println("Depth First Search Find Path:");
 
-        Assert.assertEquals("[0, 1, 5, 2, 7]", g.findPath(0, 7));
-        Assert.assertEquals("[0, 1, 5, 2]", g.findPath(0, 2));
         Assert.assertEquals("[0, 1]", g.findPath(0, 1));
+        Assert.assertEquals("[0, 1, 5]", g.findPath(0, 5));
+        Assert.assertEquals("[0, 1, 5, 2]", g.findPath(0, 2));
+        Assert.assertEquals("[0, 1, 5, 2, 7]", g.findPath(0, 7));
+        Assert.assertEquals("[0, 1, 5, 3]", g.findPath(0, 3));
+        Assert.assertEquals("[0, 1, 4]", g.findPath(0, 4));
+        Assert.assertEquals("[0, 1, 4, 6]", g.findPath(0, 6));
         Assert.assertEquals("[5, 2]", g.findPath(5, 2));
+
         Assert.assertEquals(null, g.findPath(2, 5));
+
+        // Why does this one fail?
+        // Because we already visited this path via 0, 1, 5, 3
+        // This path finder algorithm is quite dumb...
+        // Assert.assertEquals("[0, 3]", g.findPath(0, 3)); // Boom!
+
     }
 
     @Test public void HasPath() throws Exception {

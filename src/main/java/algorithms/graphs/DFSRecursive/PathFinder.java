@@ -87,7 +87,7 @@ class PathFinder
 
     public boolean hasPath(Stack<Integer> path, int from, int to) {
         if (path.contains(from) && path.contains(to)) {
-            if (path.indexOf(from) < path.indexOf(to)) {
+            if (path.indexOf(from) < path.indexOf(to)) { // from must be before
                 return true;
             }
         }

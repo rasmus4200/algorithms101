@@ -23,12 +23,30 @@ class PathDetector
         adj[v].add(w);
     }
 
+    boolean hasPath(int from, int to)
+    {
+        // Mark all the vertices as not visited
+        boolean visited[] = new boolean[V];
+
+        // Reset path found
+        pathFound = false;
+
+        // Setup our tracker
+        Stack tracker = new Stack<Integer>();
+
+        // Call the recursive helper function to print findPath traversal
+        DFSUtil(from, to, visited, tracker);
+
+        return pathFound;
+    }
+
     void DFSUtil(int from, int to, boolean visited[], Stack tracker)
     {
-        visited[from] = true;
         tracker.add(from);
         System.out.print(from + " ");
         System.out.println("Adding = " + tracker);
+
+        visited[from] = true;
 
         // Check for path
         if (tracker.contains(to)) {
@@ -61,23 +79,6 @@ class PathDetector
             }
         }
         return true;
-    }
-
-    boolean hasPath(int from, int to)
-    {
-        // Mark all the vertices as not visited
-        boolean visited[] = new boolean[V];
-
-        // Reset path found
-        pathFound = false;
-
-        // Setup our tracker
-        Stack tracker = new Stack<Integer>();
-
-        // Call the recursive helper function to print findPath traversal
-        DFSUtil(from, to, visited, tracker);
-
-        return pathFound;
     }
 
 }
