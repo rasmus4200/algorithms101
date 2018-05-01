@@ -1,4 +1,4 @@
-package algorithms.graphs.DFSIterative;
+package algorithms.graphs.DFS;
 
 import java.util.Iterator;
 import java.util.LinkedList;
