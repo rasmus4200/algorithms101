@@ -1,18 +1,18 @@
-package algorithms.graphs.DFSIterative;
+package algorithms.graphs.DFS;
 
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Stack;
 
 @SuppressWarnings("unchecked")
-class PathDetector
+class PathFinder
 {
     private int V;             // No. of vertices
     private LinkedList[] adj;  // Adjacency List
     private String path;
     private int startingFrom;
 
-    PathDetector(int v) {
+    PathFinder(int v) {
         V = v;
         adj = new LinkedList[v];
         for (int i=0; i<v; ++i)
@@ -35,24 +35,23 @@ class PathDetector
 
         while (!stack.isEmpty()) {
 
+            int current = stack.pop();
+            visited[current] = true;
+            tracker.add(current);
+            System.out.print(current + " ");
+            System.out.println("Adding = " + tracker);
+
             // Check for path
             if (hasPath(tracker, startingFrom, to) && path == null) {
                 path = tracker.toString();
             }
 
-            int current = stack.pop();
-            visited[current] = true;
-            tracker.add(current);
-            System.out.println("Adding = " + tracker);
-            System.out.print(current + " ");
-
-            // Check to see if we have exhausted all paths
+            // If we have exhausted all paths...
             Iterator<Integer> j = adj[current].listIterator();
             if (allNeighborsVisited(j, visited)) {
                 // Pop until we find a node with neighbors
                 // that haven't been visited
                 popTillYouDrop(tracker, visited);
-
             }
 
             Iterator<Integer> i = adj[current].listIterator();
@@ -63,12 +62,10 @@ class PathDetector
                     stack.add(n);
                 }
             }
-
         }
     }
 
     private void popTillYouDrop(Stack<Integer> tracker, boolean[] visited) {
-
         if (tracker.isEmpty()) return;
 
         int current = tracker.peek();
@@ -94,7 +91,7 @@ class PathDetector
         return true;
     }
 
-    public boolean hasPath(Stack<Integer> path, int from, int to) {
+    private boolean hasPath(Stack<Integer> path, int from, int to) {
         if (path.contains(from) && path.contains(to)) {
             if (path.indexOf(from) < path.indexOf(to)) { // from must be before
                 return true;
@@ -111,5 +108,4 @@ class PathDetector
 
         return path;
     }
-
 }

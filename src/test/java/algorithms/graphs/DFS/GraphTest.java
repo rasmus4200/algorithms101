@@ -1,4 +1,4 @@
-package algorithms.graphs.DFSIterative;
+package algorithms.graphs.DFS;
 
 import org.junit.Before;
 import org.junit.Test;

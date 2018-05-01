@@ -1,12 +1,12 @@
 package algorithms;
 
-import algorithms.Person;
-import algorithms.Trie;
 import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
+//
+// Note: This is code for a future episode. Stay tuned!
+//
 
 public class TrieTest {
 
@@ -37,18 +37,4 @@ public class TrieTest {
         Assert.assertTrue(trie.contains("Canada"));
     }
 
-    @Test
-    public void foo() {
-        Object[] objects = new Object[10];
-        String[] strings = new String[10];
-        Person[] people = new Person[10];
-
-        objects[0] = "a";
-        Object first = objects[0];
-
-        ArrayList<Object> stuff = new ArrayList<Object>();
-        stuff.add("a");
-        stuff.remove("b");
-        stuff.contains("c");
-    }
 }
