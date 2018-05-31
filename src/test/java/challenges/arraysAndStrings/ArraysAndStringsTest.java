@@ -91,6 +91,7 @@ public class ArraysAndStringsTest {
         Assert.assertEquals("ab", compressor.compress("ab"));
         Assert.assertEquals("abc", compressor.compress("abc"));
         Assert.assertEquals("z3", compressor.compress("zzz"));
+        Assert.assertEquals("aabbaabb", compressor.compress("aabbaabb")); // not shorter
     }
 
     @Test
