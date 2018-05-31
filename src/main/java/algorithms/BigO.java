@@ -46,7 +46,7 @@ public class BigO {
             // ...
             for (int j = 0; j < array.length; j++) {
                 // ...
-                for (int k = 0; k < 9999999; j++) {
+                for (int k = 0; k < 9999999; k++) {
                     // Jump!
                 }
             }

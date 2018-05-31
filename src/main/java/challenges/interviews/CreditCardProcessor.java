@@ -19,13 +19,11 @@ public class CreditCardProcessor {
     }
 
     public String getCardType(String cardNumber) {
-
         for (CreditCard creditCard : creditCards) {
             if (creditCard.matches(cardNumber)) {
                 return creditCard.Name();
             }
         }
-
         return "Unknown";
     }
 }

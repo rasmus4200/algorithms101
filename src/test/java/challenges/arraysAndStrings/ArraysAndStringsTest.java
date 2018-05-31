@@ -83,7 +83,7 @@ public class ArraysAndStringsTest {
     public void Compressor() {
         // Challenge: Give a string with repeating characters (i.e. "aaabb") write
         // an algorithm that will compress the string down to the character, followed
-        // by the number of times it appears in the string (i.e "a3b3").
+        // by the number of times it appears in the string (i.e "a3b2").
         // If the compressed string is not smaller than original, return original.
 
         Assert.assertEquals("a3b2", compressor.compress("aaabb"));
