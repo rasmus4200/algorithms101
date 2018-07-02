@@ -26,4 +26,16 @@ public class CreditCardProcessor {
         }
         return "Unknown";
     }
+
+//    public String getCardType(String cardNumber) {
+//        if (cardNumber.startsWith("4111111111111111")) {
+//            return "VISA";
+//        } else if (cardNumber.startsWith("341111111111111")) {
+//            return "Amex";
+//        } else if (cardNumber.startsWith("371111111111111")) {
+//            return "Amex";
+//        }
+//        return "Unknown";
+//    }
+
 }

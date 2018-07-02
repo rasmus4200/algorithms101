@@ -21,17 +21,17 @@ public class CreditCard {
         this.lengths = new ArrayList<>(Arrays.asList(lengthsAsIntegers));
     }
 
-    public boolean matches(String cardNumer) {
+    public boolean matches(String cardNumber) {
 
         // check lengths
-        if (!lengths.contains(cardNumer.length())) {
+        if (!lengths.contains(cardNumber.length())) {
             return false;
         }
 
         // check prefixes
         boolean matchesPrefix = false;
         for (String prefix: prefixes) {
-            if (cardNumer.startsWith(prefix)) {
+            if (cardNumber.startsWith(prefix)) {
                 matchesPrefix = true;
             }
         }
