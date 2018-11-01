@@ -76,12 +76,12 @@ public class HashTable {
         int index = (hashCode & 0x7fffffff) % INITIAL_SIZE;
 //        int index = hashCode % INITIAL_SIZE;
 
-        System.out.println("index = " + index);
-
         // Hack to force collision for testing
         if (key.equals("John Smith") || key.equals("Sandra Dee")) {
             index = 4;
         }
+
+        System.out.println("index = " + index);
 
         return index;
     }
