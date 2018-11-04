@@ -67,7 +67,7 @@ public class MaxIntHeap {
 
             // now compare
 
-            // if I am smaller than the items of my two children...
+            // if I am larger than the items of my two children...
             // then everything is good. I am sorted.
             if(items[index] > items[smallerChildIndex]) {
                 break;
