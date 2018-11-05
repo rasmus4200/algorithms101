@@ -22,7 +22,7 @@ public class IntReverser {
     //
 
     public int reverse(int x) {
-        boolean isNegative = x < 0 ? true : false;
+        boolean isNegative = x < 0;
 
         if(isNegative) {
             x = x * -1;
@@ -37,7 +37,7 @@ public class IntReverser {
             x = x / 10; // get rid of last digit
         }
 
-        return isNegative == true? reverse*-1 : reverse;
+        return isNegative ? reverse*-1 : reverse;
 
     }
 
