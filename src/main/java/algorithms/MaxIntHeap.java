@@ -24,7 +24,7 @@ public class MaxIntHeap {
         if (size == 0) throw new IllegalStateException();
         int item = items[0];        // grab the max
         items[0] = items[size - 1]; // swap top and bottom
-        size--;
+        size--;                     // effectively deletes last entry (max)
         heapifyDown();              // reorder
         return item;                // return max
     }
