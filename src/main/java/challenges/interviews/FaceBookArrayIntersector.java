@@ -49,7 +49,7 @@ public class FaceBookArrayIntersector {
 
         // O(n)
         for (int i : array1) {
-            // O(n)
+            // O(m)
             for (int j : array2) {
                 if (i == j) {
                     collector.add(i);
