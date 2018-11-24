@@ -77,6 +77,10 @@ public class ArraysAndStringsTest {
         Assert.assertTrue(oneAwayDetector.oneAway("pales", "pale"));
         Assert.assertTrue(oneAwayDetector.oneAway("pale", "bale"));
         Assert.assertFalse(oneAwayDetector.oneAway("pale", "bake"));
+
+        Assert.assertTrue(oneAwayDetector.oneAway("pale", "aale"));
+        Assert.assertTrue(oneAwayDetector.oneAway("pale", "pble"));
+        Assert.assertTrue(oneAwayDetector.oneAway("pale", "palk"));
     }
 
     @Test
