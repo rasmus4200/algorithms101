@@ -73,6 +73,8 @@ public class ArraysAndStringsTest {
         // remove a character, or replace a character. Given two strings, write a function to check if they are
         // one or zero edits away.
 
+        Assert.assertFalse(oneAwayDetector.oneAway("pale", "paleXXXX"));
+        
         Assert.assertTrue(oneAwayDetector.oneAway("pale", "ple"));
         Assert.assertTrue(oneAwayDetector.oneAway("pales", "pale"));
         Assert.assertTrue(oneAwayDetector.oneAway("pale", "bale"));
