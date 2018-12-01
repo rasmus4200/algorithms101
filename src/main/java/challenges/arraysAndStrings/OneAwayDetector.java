@@ -5,11 +5,14 @@ public class OneAwayDetector {
     public boolean oneAway(String first, String second) {
 
         // Let's break this down.
-        // If the strings are the same length, they are one replacement away
-        // If the strings differ by one,       they may be one edit or insert away
-        // If the strings differ by one less,  they may be one edit or insert away
+        // If the strings differ by > 1 length, they are not one replacement away
+        // If the strings are the same length,  they are one replacement away
+        // If the strings differ by one,        they may be one edit or insert away
+        // If the strings differ by one less,   they may be one edit or insert away
 
-        if (first.length() == second.length()) {
+        if (Math.abs(first.length() - second.length()) > 1) {
+            return false;
+        } else if (first.length() == second.length()) {
             return OneEditReplace(first, second);
         } else if (first.length() + 1 == second.length()) {
             return OneEditInsert(first, second);
