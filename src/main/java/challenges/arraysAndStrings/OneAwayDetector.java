@@ -11,7 +11,7 @@ public class OneAwayDetector {
         // If the strings differ by one less,   they may be one edit or insert away
 
         if (Math.abs(first.length() - second.length()) > 1) {
-            return false;
+            return false;        
         } else if (first.length() == second.length()) {
             return OneEditReplace(first, second);
         } else if (first.length() + 1 == second.length()) {
