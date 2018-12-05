@@ -29,13 +29,12 @@ public class CreditCard {
         }
 
         // check prefixes
-        boolean matchesPrefix = false;
         for (String prefix: prefixes) {
             if (cardNumber.startsWith(prefix)) {
-                matchesPrefix = true;
+                return true;
             }
         }
 
-        return matchesPrefix;
+        return false;
     }
 }
