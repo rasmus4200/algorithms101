@@ -26,7 +26,7 @@ public class QuickSort {
         // Better would be to choose left + (right-left)/2 (as this would avoid overflow error for large arrays i.e. 2GB))
         int pivot = array[(left + right)/2];
 
-        // Step 2: Parition the array around this pivot - return the index of the partition
+        // Step 2: Partition the array around this pivot - return the index of the partition
         int index = partition(array, left, right, pivot);
 
         // Step 3: Sort on the left and the right side
