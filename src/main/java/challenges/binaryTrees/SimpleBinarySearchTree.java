@@ -32,7 +32,7 @@ public class SimpleBinarySearchTree {
 
         if (key < node.key) {
             node.left = insertItem(node.left, key);
-        } else {
+        } if (key > node.key) {
             node.right = insertItem(node.right, key);
         }
 

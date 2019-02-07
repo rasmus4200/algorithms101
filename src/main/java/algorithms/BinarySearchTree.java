@@ -72,12 +72,13 @@ public class BinarySearchTree {
         // that is null and set it there
         if (key < node.key) {
             node.left = insertItem(node.left, key, value);
-        } else {
+        } if (key > node.key) {
             node.right = insertItem(node.right, key, value);
         }
 
-        // We have returned from the bottom.
-        // Return our fully constructed tree. We are done!
+        // If we get here we have have hit the bottom our or tree with a duplicate.
+        // Since duplicates are not allowed in BSTs, simply ignore the duplicate,
+        // and return our fully constructed tree. We are done!
         return node;
     }
 

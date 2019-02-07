@@ -29,11 +29,13 @@ public class BinaryTreeTest {
         t1.insert(7);
         t1.insert(6);
         t1.insert(8);
+        t1.insert(7);
 
 //        t1.prettyPrint();
-//        t1.printPreOrderTraversal();
+//        System.out.println(t1.getOrder());
 
         Assert.assertEquals("5324768", t1.getOrder());
+
 
         // Create our T2 tree
         t2.insert(7);
@@ -41,7 +43,7 @@ public class BinaryTreeTest {
         t2.insert(8);
 
 //        t2.prettyPrint();
-//        t2.printPreOrderTraversal();
+//        System.out.println(t2.getOrder());
 
         Assert.assertEquals("768", t2.getOrder());
 
