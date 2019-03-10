@@ -57,13 +57,9 @@ public class BinarySearchTree {
 
     public Node insertItem(Node node, int key, String value) {
 
-        // Create a new node
-        Node newNode = new Node(key, value);
-
-        // If null
-        // Set it here. We are done.
+        // If null - set it here. We are done.
         if (node == null) {
-            node = newNode;
+            node = new Node(key, value);;
             return node;
         }
 
