@@ -60,24 +60,24 @@ public class MaxIntHeap {
         while (hasLeftChild(index)) {
 
             // take the larger of the two indexes
-            int smallerChildIndex = leftChildIndex(index);
+            int largerChildIndex = leftChildIndex(index);
             if (hasRightChild(index) && rightChild(index) > leftChild(index)) {
-                smallerChildIndex = rightChildIndex(index);
+                largerChildIndex = rightChildIndex(index);
             }
 
             // now compare
 
             // if I am larger than the items of my two children...
             // then everything is good. I am sorted.
-            if(items[index] > items[smallerChildIndex]) {
+            if(items[index] > items[largerChildIndex]) {
                 break;
             } else {
                 //  we are still not in order - swap
-                swap(index, smallerChildIndex);
+                swap(index, largerChildIndex);
             }
 
             // then move down to smaller child
-            index = smallerChildIndex;
+            index = largerChildIndex;
         }
     }
 
