@@ -6,7 +6,7 @@ import org.junit.Test;
 public class PathFinderTest {
 
     @Test
-    public void FindPath() throws Exception {
+    public void FindPath() {
         PathFinder g = new PathFinder(8);
 
         g.addEdge(0, 1);

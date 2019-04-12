@@ -10,12 +10,12 @@ public class QuickSortTest {
     private QuickSort quickSort;
 
     @Before
-    public void SetUp() throws Exception {
+    public void SetUp() {
         quickSort = new QuickSort();
     }
 
     @Test
-    public void Sort() throws Exception {
+    public void Sort() {
         int[] array = {15, 3, 2, 1, 9, 5, 7, 8, 6};
 
         int[] sorted = quickSort.sort(array);

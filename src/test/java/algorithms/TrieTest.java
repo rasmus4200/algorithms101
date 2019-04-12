@@ -13,12 +13,12 @@ public class TrieTest {
     private Trie trie;
 
     @Before
-    public void SetUp() throws Exception {
+    public void SetUp() {
         trie = new Trie();
     }
 
     @Test
-    public void SearchPrefix() throws Exception {
+    public void SearchPrefix() {
         trie.insert("tries");
         trie.insert("trie");
         trie.insert("tried");

@@ -9,12 +9,12 @@ public class BinarySearchTreeTest {
     private BinarySearchTree bst;
 
     @Before
-    public void SetUp() throws Exception {
+    public void SetUp() {
         bst = new BinarySearchTree();
     }
 
     @Test
-    public void Insert() throws Exception {
+    public void Insert() {
         bst.insert(5, "e");
         bst.insert(3, "c");
         bst.insert(2, "b");
@@ -40,7 +40,7 @@ public class BinarySearchTreeTest {
     }
 
     @Test
-    public void MinKey() throws Exception {
+    public void MinKey() {
         bst.insert(5, "e");
         bst.insert(3, "c");
         bst.insert(2, "b");
@@ -49,7 +49,7 @@ public class BinarySearchTreeTest {
     }
 
     @Test
-    public void DeleteNoChild() throws Exception {
+    public void DeleteNoChild() {
         bst.insert(5, "e");
         bst.insert(3, "c");
         bst.insert(2, "b");
@@ -66,7 +66,7 @@ public class BinarySearchTreeTest {
     }
 
     @Test
-    public void DeleteOneChild() throws Exception {
+    public void DeleteOneChild() {
         bst.insert(5, "e");
         bst.insert(3, "c");
         bst.insert(2, "b");
@@ -83,7 +83,7 @@ public class BinarySearchTreeTest {
     }
 
     @Test
-    public void DeleteTwoChildren() throws Exception {
+    public void DeleteTwoChildren() {
         bst.insert(5, "e");
         bst.insert(3, "c");
         bst.insert(2, "b");

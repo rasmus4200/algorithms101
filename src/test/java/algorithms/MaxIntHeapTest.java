@@ -8,7 +8,7 @@ public class MaxIntHeapTest {
     private MaxIntHeap maxHeap;
 
     @Test
-    public void ExtractMax() throws Exception {
+    public void ExtractMax() {
         maxHeap = new MaxIntHeap();
         maxHeap.insert(42);
         maxHeap.insert(29);
@@ -35,7 +35,7 @@ public class MaxIntHeapTest {
     }
 
     @Test
-    public void ExtractMaxBigger() throws Exception {
+    public void ExtractMaxBigger() {
         maxHeap = new MaxIntHeap();
         maxHeap.insert(42);
         maxHeap.insert(29);

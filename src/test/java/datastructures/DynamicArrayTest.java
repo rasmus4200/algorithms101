@@ -9,18 +9,18 @@ public class DynamicArrayTest {
     private DynamicArray array;
 
     @Before
-    public void SetUp() throws Exception {
+    public void SetUp() {
         array = new DynamicArray<String>(2);
     }
 
     @Test
-    public void GetAndSet() throws Exception {
+    public void GetAndSet() {
         array.set(0, "a");
         Assert.assertEquals("a", array.get(0));
     }
 
     @Test
-    public void Insert() throws Exception {
+    public void Insert() {
         array.add("a"); // 0
         array.add("b"); // 1
         array.add("c"); // 2
@@ -35,7 +35,7 @@ public class DynamicArrayTest {
     }
 
     @Test
-    public void Delete() throws Exception {
+    public void Delete() {
         array.add("a");
         array.add("b");
         array.add("c");
@@ -48,14 +48,14 @@ public class DynamicArrayTest {
     }
 
     @Test
-    public void isEmpty() throws Exception {
+    public void isEmpty() {
         Assert.assertTrue(array.isEmpty());
         array.add("a");
         Assert.assertFalse(array.isEmpty());
     }
 
     @Test
-    public void Contains() throws Exception {
+    public void Contains()  {
         Assert.assertFalse(array.Contains("a"));
         array.add("a");
         Assert.assertTrue(array.Contains("a"));

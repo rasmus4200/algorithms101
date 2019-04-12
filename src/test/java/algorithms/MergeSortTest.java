@@ -9,12 +9,12 @@ public class MergeSortTest {
     private MergeSort mergeSort;
 
     @Before
-    public void SetUp() throws Exception {
+    public void SetUp() {
         mergeSort = new MergeSort();
     }
 
     @Test
-    public void Sort() throws Exception {
+    public void Sort() {
 
         //           l                  r
         int arr[] = {4, 7, 14, 1, 3, 9, 17};

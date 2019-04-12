@@ -8,12 +8,12 @@ public class GraphTest {
     private Graph g;
 
     @Before
-    public void SetUp() throws Exception {
+    public void SetUp() {
         g = new Graph(8);
     }
 
     @Test
-    public void DepthFirstSearch() throws Exception {
+    public void DepthFirstSearch() {
 
         g.addEdge(0, 1);
         g.addEdge(1, 0);
@@ -41,7 +41,7 @@ public class GraphTest {
     }
 
     @Test
-    public void DepthFirstSearchDirected() throws Exception {
+    public void DepthFirstSearchDirected() {
 
         g.addEdge(0, 1);
         g.addEdge(1, 4);
