@@ -76,7 +76,7 @@ public class FaceBookArrayIntersector {
 
         ArrayList<Integer> collector = new ArrayList<>();
 
-        // O(n or m)
+        // O(n + m)
         while (i < m && j < n) {
             if (array1[i] < array2[j]) {
                 i++;
