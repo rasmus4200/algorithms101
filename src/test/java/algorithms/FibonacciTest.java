@@ -12,13 +12,13 @@ public class FibonacciTest {
     private FibonacciMemoized memo;
 
     @Before
-    public void setUp() throws Exception {
+    public void SetUp() {
         naive = new FibonacciNaive();
         memo = new FibonacciMemoized();
     }
 
     @Test
-    public void Naive() throws Exception {
+    public void Naive() {
         Assert.assertEquals(0, naive.fib(0));
         Assert.assertEquals(1, naive.fib(1));
         Assert.assertEquals(1, naive.fib(2));
@@ -31,7 +31,7 @@ public class FibonacciTest {
     }
 
     @Test
-    public void Memoized() throws Exception {
+    public void Memoized() {
         Assert.assertEquals(0, memo.fib(0));
         Assert.assertEquals(1, memo.fib(1));
         Assert.assertEquals(1, memo.fib(2));
@@ -44,7 +44,7 @@ public class FibonacciTest {
     }
 
     @Test
-    public void RecordTimeNaive() throws Exception {
+    public void RecordTimeNaive() {
         long startTime = System.currentTimeMillis();
         naive.fib(30);
         long endTime = System.currentTimeMillis();
@@ -53,7 +53,7 @@ public class FibonacciTest {
     }
 
     @Test
-    public void RecordTimeMemoized() throws Exception {
+    public void RecordTimeMemoized() {
         long startTime = System.currentTimeMillis();
         memo.fib(1000);
         long endTime = System.currentTimeMillis();

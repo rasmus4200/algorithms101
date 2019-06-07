@@ -12,12 +12,12 @@ public class ShortestPathTest {
     private ShortestPath g;
 
     @Before
-    public void SetUp() throws Exception {
+    public void SetUp() {
         g = new ShortestPath();
     }
 
     @Test
-    public void BreadFirstSearch() throws Exception {
+    public void BreadFirstSearch() {
         int graph[][] = new int[][]{
                 {0, 4, 0, 0, 0, 0, 0, 8, 0},
                 {4, 0, 8, 0, 0, 0, 0, 11, 0},

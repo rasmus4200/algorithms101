@@ -9,7 +9,7 @@ public class LinkedListWithIndexTest {
     private LinkedListWithIndex linkedList;
 
     @Before
-    public void SetUp() throws Exception {
+    public void SetUp() {
         linkedList = new LinkedListWithIndex();
     }
 

@@ -9,18 +9,18 @@ public class SingleLinkedListTest {
     private SingleLinkedList sll;
 
     @Before
-    public void setUp() throws Exception {
+    public void SetUp() {
         sll = new SingleLinkedList<Integer>();
     }
 
     @Test
-    public void InitialState() throws Exception {
+    public void InitialState() {
         Assert.assertNull(sll.head);
         Assert.assertEquals(0, sll.size);
     }
 
     @Test
-    public void lastIndexOf() throws Exception {
+    public void lastIndexOf() {
         sll.push(99);
         sll.push(100);
         sll.push(101);
@@ -30,18 +30,18 @@ public class SingleLinkedListTest {
     }
 
     @Test
-    public void peek() throws Exception {
+    public void peek() {
         sll.push(99);
         Assert.assertEquals(99, sll.peek());
     }
 
     @Test
-    public void peekEmpty() throws Exception {
+    public void peekEmpty() {
         Assert.assertEquals(null, sll.peek());
     }
 
     @Test
-    public void pushAndPop() throws Exception {
+    public void pushAndPop() {
         sll.push(99);
         sll.push(100);
         sll.push(101);
@@ -51,12 +51,12 @@ public class SingleLinkedListTest {
     }
 
     @Test
-    public void popEmptyList() throws Exception {
+    public void popEmptyList() {
         Assert.assertNull(sll.pop());
     }
 
     @Test
-    public void remove() throws Exception {
+    public void remove() {
         sll.push(99);
         sll.push(100);
         sll.push(101);
@@ -72,7 +72,7 @@ public class SingleLinkedListTest {
     }
 
     @Test
-    public void pushSize() throws Exception {
+    public void pushSize() {
         Assert.assertEquals(0, sll.size);
         sll.push(99);
         Assert.assertEquals(1, sll.size);
@@ -81,7 +81,7 @@ public class SingleLinkedListTest {
     }
 
     @Test
-    public void popSize() throws Exception {
+    public void popSize() {
         sll.push(99);
         sll.push(100);
         Assert.assertEquals(2, sll.size);
@@ -90,7 +90,7 @@ public class SingleLinkedListTest {
     }
 
     @Test
-    public void removeSize() throws Exception {
+    public void removeSize() {
         sll.push(99);
         sll.push(100);
         Assert.assertEquals(2, sll.size);
@@ -99,7 +99,7 @@ public class SingleLinkedListTest {
     }
 
     @Test
-    public void setIndex() throws Exception {
+    public void setIndex() {
         sll.push(99);
         sll.push(100);
         sll.push(101);
@@ -114,7 +114,7 @@ public class SingleLinkedListTest {
     }
 
 //    @Test
-//    public void realLinkedList() throws Exception {
+//    public void realLinkedList() {
 //
 //        // Here are some tests written against the Java datastructures.LinkedList class
 //

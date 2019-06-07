@@ -10,7 +10,7 @@ public class MinIntHeapTest {
     private MinIntHeap minHeap;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         minHeap = new MinIntHeap();
         minHeap.add(6);
         minHeap.add(5);
@@ -21,7 +21,7 @@ public class MinIntHeapTest {
     }
 
     @Test
-    public void Insert() throws Exception {
+    public void Insert() {
         // Remember: The array walks top down / left to right
         Assert.assertEquals(1, minHeap.items[0]);
         Assert.assertEquals(3, minHeap.items[1]);
@@ -32,7 +32,7 @@ public class MinIntHeapTest {
     }
 
     @Test
-    public void ExtractMin() throws Exception {
+    public void ExtractMin() {
         Assert.assertEquals(1, minHeap.extractMin());
         Assert.assertEquals(2, minHeap.extractMin());
         Assert.assertEquals(3, minHeap.extractMin());

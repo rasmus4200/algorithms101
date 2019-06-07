@@ -29,10 +29,9 @@ public class CaesarCipherAdvanced {
 
     public String encrypt(String plainText, int n) {
 
-        String cipherText = "";
+        StringBuilder cipherText = new StringBuilder();
 
-        for (int i = 0; i < plainText.length(); i++)
-        {
+        for (int i = 0; i < plainText.length(); i++) { // O(n)
             char charToEncrypt = plainText.charAt(i);
             char replaceVal = ' ';
 
@@ -42,18 +41,26 @@ public class CaesarCipherAdvanced {
                 replaceVal = ALPHABET.charAt(keyVal);
             }
 
-            cipherText += replaceVal;
+            cipherText.append(replaceVal); // O(1) because using StringBuffer
         }
 
         return cipherText.toString();
+
+        // Runtime: Originally I coded this concatenating the result +=
+        //
+        //             cipherText += replaceVal;
+        //
+        // which was O(n^2) or quadratic. This isn't great for performance.
+        // By switching to a StringBuilder, we get O(1) performance when combining the strings.
+        // Which makes the overall runtime of the operation O(n) because of the for loop.
+        //
     }
 
     public String decrypt(String cipherText, int n) {
 
-        String plainText = "";
+        StringBuilder plainText = new StringBuilder();
 
-        for (int i = 0; i < cipherText.length(); i++)
-        {
+        for (int i = 0; i < cipherText.length(); i++) {
             char charToDecrypt = cipherText.charAt(i);
             char replaceVal = ' ';
 
@@ -61,18 +68,17 @@ public class CaesarCipherAdvanced {
                 int x = ALPHABET.indexOf(charToDecrypt);
                 int keyVal = (x - n) % 26;
 
-                if (keyVal < 0)
-                {
+                if (keyVal < 0) {
                     keyVal = ALPHABET.length() + keyVal;
                 }
 
                 replaceVal = ALPHABET.charAt(keyVal);
             }
 
-            plainText += replaceVal;
+            plainText.append(replaceVal);
         }
 
-        return plainText;
+        return plainText.toString();
     }
 
 }

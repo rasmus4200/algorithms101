@@ -65,7 +65,7 @@ public class MinIntHeap {
             // pick a direction, and get the smaller of the two indexes
             int smallerChildIndex = leftChildIndex(index);
             if (hasRightChild(index) && rightChild(index) < leftChild(index)) {
-                // swap right (because we are min heap
+                // swap right (because we are min heap)
                 smallerChildIndex = rightChildIndex(index);
             }
 

@@ -9,7 +9,7 @@ public class LinkedListTest {
     private LinkedList linkedList;
 
     @Before
-    public void SetUp() throws Exception {
+    public void SetUp() {
         linkedList = new LinkedList();
     }
 

@@ -9,12 +9,12 @@ public class GraphTest {
     private Graph g;
 
     @Before
-    public void SetUp() throws Exception {
+    public void SetUp() {
         g = new Graph(8);
     }
 
     @Test
-    public void BreadFirstSearch() throws Exception {
+    public void BreadFirstSearch() {
 
         g.addEdge(0, 1);
         g.addEdge(1, 0);

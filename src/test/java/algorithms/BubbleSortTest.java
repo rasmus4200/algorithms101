@@ -9,12 +9,12 @@ public class BubbleSortTest {
     private BubbleSort bubbleSort;
 
     @Before
-    public void SetUp() throws Exception {
+    public void SetUp() {
         bubbleSort = new BubbleSort();
     }
 
     @Test
-    public void Sort() throws Exception {
+    public void Sort() {
         int[] array = {5, 1, 4, 2, 8};
 
         int[] sorted = bubbleSort.sort(array);
