@@ -29,7 +29,6 @@ public class BinaryTreeTest {
         t1.insert(7);
         t1.insert(6);
         t1.insert(8);
-        t1.insert(7);
 
 //        t1.prettyPrint();
 //        System.out.println(t1.getOrder());
