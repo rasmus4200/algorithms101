@@ -81,15 +81,20 @@ public class LinkedListTest {
         Assert.assertEquals(3, linkedList.getLast());
     }
 
-    // TODO
+    @Test
+    public void DeleteLastValue() {
+        linkedList.addBack(1);
+        linkedList.addBack(2);
+        linkedList.addBack(3);
+        linkedList.addBack(4);
 
-    // Size
-    // Clear
-    // Delete with value
-    // Remove front
-    // Remove back
-    // Contains
+        linkedList.deleteValue(4);
 
-    // What you need to know
+        Assert.assertEquals(3, linkedList.size());
+        Assert.assertEquals(1, linkedList.getFirst());
+        Assert.assertEquals(3, linkedList.getLast());
+
+        linkedList.print();
+    }
 
 }
