@@ -64,7 +64,7 @@ public class AmazonArrayMerger {
     I originally thought when creating this lesson).
 
     But you can see the this one beautiful little algorithm handles all test cases Amazon threw at it.
-    I will remember this for next time. And so you will you :)
+    I will remember this for next time. And so will you :)
 
      */
     public int[] merge(int[] L1, int[] L2) {
@@ -99,7 +99,7 @@ public class AmazonArrayMerger {
             k++;
         }
 
-        // Copy remaining elements of L1
+        // Copy remaining elements of L2
         while (j < L2.length)
         {
             System.out.println("Remaining L2 = " + L2[j] + " k = " + k);

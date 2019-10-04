@@ -63,4 +63,16 @@ public class AmazonInterviewTest {
         Assert.assertTrue(Arrays.equals(expected, result));
     }
 
+    @Test
+    public void Merge2() {
+
+        int[] L1 = { 1,7,9 };
+        int[] L2 = { 4,5,6 };
+
+        int[] result = merger.merge(L1, L2);
+        int[] expected = { 1,4,5,6,7,9 };
+
+        Assert.assertTrue(Arrays.equals(expected, result));
+    }
+
 }
