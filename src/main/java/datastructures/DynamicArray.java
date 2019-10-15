@@ -3,7 +3,12 @@ package datastructures;
 public class DynamicArray<String> {
 
     private Object[] data;
+
+    // Counter for the number of elements in our array
     private int size = 0;
+
+    // The capacity of our array - or how many elements it can hold.
+    // What we double when the number of elements exceeds the capacity of the array.
     private int initialCapacity;
 
     public DynamicArray(int initialCapacity) {
