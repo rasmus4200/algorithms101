@@ -102,13 +102,11 @@ class AVLTree {
         // If this node becomes unbalanced, then there
         // are 4 cases Left Left Case
         if (balance > 1 && key < node.left.key) {
-            System.out.println("Rotate right");
             return rightRotate(node);
         }
 
         // Right Right Case
         if (balance < -1 && key > node.right.key) {
-            System.out.println("Rotate left");
             return leftRotate(node);
         }
 
