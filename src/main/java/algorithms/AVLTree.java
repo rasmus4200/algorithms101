@@ -1,5 +1,7 @@
 package algorithms;
 
+import static java.lang.System.out;
+
 class Node {
     int key, height;
     Node left, right;
@@ -99,12 +101,16 @@ class AVLTree {
 
         // If this node becomes unbalanced, then there
         // are 4 cases Left Left Case
-        if (balance > 1 && key < node.left.key)
+        if (balance > 1 && key < node.left.key) {
+            System.out.println("Rotate right");
             return rightRotate(node);
+        }
 
         // Right Right Case
-        if (balance < -1 && key > node.right.key)
+        if (balance < -1 && key > node.right.key) {
+            System.out.println("Rotate left");
             return leftRotate(node);
+        }
 
         // Left Right Case
         if (balance > 1 && key > node.left.key) {
@@ -122,17 +128,6 @@ class AVLTree {
         return node;
     }
 
-    // A utility function to print preorder traversal
-    // of the tree.
-    // The function also prints height of every node
-    void preOrder(Node node) {
-        if (node != null) {
-            System.out.print(node.key + " ");
-            preOrder(node.left);
-            preOrder(node.right);
-        }
-    }
-
     public void printInOrderTraversal() {
         inOrderTraversal(root);
     }
@@ -140,34 +135,11 @@ class AVLTree {
     private void inOrderTraversal(Node node) {
         if (node != null) {
             inOrderTraversal(node.left);
-            System.out.println(node.key);
+            out.println(node.key);
             inOrderTraversal(node.right);
         }
     }
 
-
-    public static void main(String[] args) {
-        AVLTree tree = new AVLTree();
-
-        /* Constructing tree given in the above figure */
-        tree.root = tree.insert(tree.root, 10);
-        tree.root = tree.insert(tree.root, 20);
-        tree.root = tree.insert(tree.root, 30);
-        tree.root = tree.insert(tree.root, 40);
-        tree.root = tree.insert(tree.root, 50);
-        tree.root = tree.insert(tree.root, 25);
-
-        /* The constructed AVL Tree would be
-             30
-            /  \
-          20   40
-         /  \     \
-        10  25    50
-        */
-        System.out.println("Preorder traversal" +
-                " of constructed tree is : ");
-        tree.preOrder(tree.root);
-    }
 }
 
 // Code modified from https://www.geeksforgeeks.org/avl-tree-set-1-insertion/

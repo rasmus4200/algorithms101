@@ -14,7 +14,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void LeftRotation() {
+    public void LeftLeft() {
         avl.insert(30);
         avl.insert(20);
         avl.insert(10);
@@ -31,7 +31,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void RightRotation() {
+    public void RightRight() {
         avl.insert(30);
         avl.insert(40);
         avl.insert(50);
@@ -48,7 +48,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void LeftRightRotation() {
+    public void LeftRight() {
         avl.insert(30);
         avl.insert(20);
         avl.insert(25);
@@ -65,7 +65,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void RightLeftRotation() {
+    public void RightLeft() {
         avl.insert(30);
         avl.insert(40);
         avl.insert(35);
