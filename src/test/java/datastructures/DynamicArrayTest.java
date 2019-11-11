@@ -48,6 +48,20 @@ public class DynamicArrayTest {
     }
 
     @Test
+    public void DeleteLast() {
+        array.add("a");
+        array.add("b");
+        array.add("c");
+
+        array.delete(2);
+
+        Assert.assertEquals(2, array.size());
+        Assert.assertEquals("a", array.get(0));
+        Assert.assertEquals("b", array.get(1));
+        Assert.assertEquals(null, array.get(2));
+    }
+
+    @Test
     public void isEmpty() {
         Assert.assertTrue(array.isEmpty());
         array.add("a");

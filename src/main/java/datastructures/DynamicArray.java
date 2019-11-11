@@ -95,6 +95,11 @@ public class DynamicArray<String> {
             data[j] = data[j + 1];
         }
         size--;
+
+        // Clear if last element in array
+        if (index == size) {
+            data[index] = null;
+        }
     }
 
     public boolean isEmpty() {
