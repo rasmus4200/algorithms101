@@ -20,6 +20,14 @@ public class DynamicArrayTest {
     }
 
     @Test
+    public void addDynamic() {
+        array.add("a"); // 0
+        array.add("b"); // 1
+        array.add("c"); // 2
+        Assert.assertEquals("c", array.get(2));
+    }
+
+    @Test
     public void Insert() {
         array.add("a"); // 0
         array.add("b"); // 1
@@ -41,10 +49,10 @@ public class DynamicArrayTest {
         array.add("c");
 
         array.delete(1);
-
         Assert.assertEquals(2, array.size());
         Assert.assertEquals("a", array.get(0));
         Assert.assertEquals("c", array.get(1));
+        Assert.assertEquals(null, array.get(2));
     }
 
     @Test
