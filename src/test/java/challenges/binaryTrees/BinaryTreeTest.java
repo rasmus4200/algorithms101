@@ -21,6 +21,7 @@ public class BinaryTreeTest {
         SimpleBinarySearchTree t1 = new SimpleBinarySearchTree();
         SimpleBinarySearchTree t2 = new SimpleBinarySearchTree();
 
+
         // Create our T1 tree
         t1.insert(5);
         t1.insert(3);
