@@ -9,11 +9,18 @@ public class CustomBinaryTree {
     }
 
     public void add(CustomBinaryTreeNode parent, CustomBinaryTreeNode child, String orientation) {
-
+        if(orientation == "left") {
+            parent.left = child;
+        }
+        if(orientation == "right") {
+            parent.right = child;
+        }
     }
 
     public int countPathsWithSum(int targetSum) {
-        return 0;
+        int paths = root.key;
+        paths += countPathsWithSum(root, targetSum);
+        return paths;
     }
 
     private int countPathsWithSum(CustomBinaryTreeNode root, int targetSum) {
