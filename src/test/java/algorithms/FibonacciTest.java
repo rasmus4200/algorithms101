@@ -44,16 +44,16 @@ public class FibonacciTest {
     @Test
     public void RecordTimeNaive() {
         long startTime = System.currentTimeMillis();
-        naive.fib(30);
+        naive.fib(47);
         long endTime = System.currentTimeMillis();
         long elapsedTime = (endTime - startTime) / 1000;
-        System.out.println("elapsedTime = " + elapsedTime); // 19s
+        System.out.println("elapsedTime = " + elapsedTime); // 14s
     }
 
     @Test
     public void RecordTimeMemoized() {
         long startTime = System.currentTimeMillis();
-        memo.fib(1000);
+        memo.fib(10000);
         long endTime = System.currentTimeMillis();
         long elapsedTime = (endTime - startTime) / 1000;
         System.out.println("elapsedTime = " + elapsedTime); // 20s
