@@ -16,13 +16,9 @@ public class MergeSortTest {
     @Test
     public void Sort() {
 
-        //           l                  r
         int arr[] = {4, 7, 14, 1, 3, 9, 17};
 
-        int l = 0;              // left pointer
-        int r = arr.length - 1; // right pointer
-
-        mergeSort.sort(arr, l, r);
+        mergeSort.sort(arr);
 
         Assert.assertEquals(1, arr[0]);
         Assert.assertEquals(3, arr[1]);
