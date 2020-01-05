@@ -13,16 +13,38 @@ public class QuickSort {
         // Then eventually our array becomes sorted.
 
 
+        quickSort(array, 0, array.length-1);
         return array;
     }
 
     private void quickSort(int[] array, int left, int right) {
-
+        if(left >= right) {
+            return;
+        }
+        int pivot = array[(left+right)/2];
+        int index = pivot(array, left, right, pivot);
+        quickSort(array, left, index-1);
+        quickSort(array, index, right);
     }
 
-    private int partition(int[] array, int left, int right, int pivot) {
+    private int pivot(int[] array, int left, int right, int pivot) {
+        int leftIndex = left;
+        int rightIndex = right;
 
-        return left;
+        while (leftIndex < rightIndex) {
+            while(array[leftIndex] < pivot) {
+                leftIndex++;
+            }
+            while(array[rightIndex] > pivot) {
+                rightIndex--;
+            }
+            if(leftIndex <= rightIndex) {
+                swap(array, leftIndex, rightIndex);
+                leftIndex++;
+                rightIndex--;
+            }
+        }
+        return leftIndex;
     }
 
     private void swap(int[] array, int left, int right) {

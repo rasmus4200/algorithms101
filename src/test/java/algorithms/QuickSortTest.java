@@ -16,6 +16,8 @@ public class QuickSortTest {
     @Test
     public void Sort() {
         int[] array = {15, 3, 2, 1, 9, 5, 7, 8, 6};
+        //8, 3, 2, 1, 6, 5, 7, 15, 9
+        //      l           r
 
         int[] sorted = quickSort.sort(array);
 
