@@ -70,18 +70,14 @@ public class HashTable {
     private int getIndex(String key) {
         // Get the hash code
         int hashCode = key.hashCode();
-        System.out.println("hashCode = " + hashCode);
 
         // Convert to index
         int index = (hashCode & 0x7fffffff) % INITIAL_SIZE;
-//        int index = hashCode % INITIAL_SIZE;
 
         // Hack to force collision for testing
         if (key.equals("John Smith") || key.equals("Sandra Dee")) {
-            index = 4;
+            index = 7; // 4 clashes with other names (changed to 7)
         }
-
-        System.out.println("index = " + index);
 
         return index;
     }
