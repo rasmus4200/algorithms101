@@ -53,18 +53,14 @@ public class HashTable {
         // Get the current list of entries
         HashEntry entries = data[index];
 
-        // if we have existing entries against this key...
-        if (entries != null) {
-            // else walk chain until find a match
-            while (!entries.key.equals(key) && entries.next !=null) {
-                entries = entries.next;
-            }
-            // then return it
-            return entries.value;
+        // While there are elements in the linked list...
+        while (entries != null) {
+            if (entries.key.equals(key))    // Check for match
+                return entries.value;       // if match found return
+            entries = entries.next;         // else go to next node in chain
         }
 
-        // it we have no entries against this key...
-       return null;
+       return null;                         // return null if no match found
     }
 
     private int getIndex(String key) {
@@ -75,8 +71,8 @@ public class HashTable {
         int index = (hashCode & 0x7fffffff) % INITIAL_SIZE;
 
         // Hack to force collision for testing
-        if (key.equals("John Smith") || key.equals("Sandra Dee")) {
-            index = 7; // 4 clashes with other names (changed to 7)
+        if (key.equals("John Smith") || key.equals("Sandra Dee") || key.equals("Tim Lee")) {
+            index = 4;
         }
 
         return index;

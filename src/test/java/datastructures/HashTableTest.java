@@ -33,6 +33,7 @@ public class HashTableTest {
 
     @Test
     public void Empty() {
+        Assert.assertEquals(null, hashTable.get("Ted Baker"));
         Assert.assertEquals(null, hashTable.get("Tim Lee"));
         hashTable.toString();
     }
