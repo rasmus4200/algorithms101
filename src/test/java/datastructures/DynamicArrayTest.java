@@ -73,5 +73,18 @@ public class DynamicArrayTest {
         Assert.assertFalse(array.Contains("a"));
         array.add("a");
         Assert.assertTrue(array.Contains("a"));
+        array.add("b");
+        array.add("b");
+        array.add("c");
+        Assert.assertTrue(array.Contains("b"));
+        Assert.assertTrue(array.Contains("c"));
+        array.delete(3);
+        Assert.assertFalse(array.Contains("c"));
+        array.delete(2);
+        Assert.assertTrue(array.Contains("b"));
+        array.delete(1);
+        Assert.assertFalse(array.Contains("b"));
+        array.delete(0);
+        Assert.assertFalse(array.Contains("a"));
     }
 }
