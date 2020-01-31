@@ -26,7 +26,15 @@ public class HashTableTest {
         Assert.assertEquals("521-5030", hashTable.get("Sam Doe"));
         Assert.assertEquals("521-9655", hashTable.get("Sandra Dee"));
         Assert.assertEquals("418-4165", hashTable.get("Ted Baker"));
+        Assert.assertEquals(null, hashTable.get("Tim Lee"));
 
+        hashTable.toString();
+    }
+
+    @Test
+    public void Empty() {
+        Assert.assertEquals(null, hashTable.get("Ted Baker"));
+        Assert.assertEquals(null, hashTable.get("Tim Lee"));
         hashTable.toString();
     }
 
@@ -38,5 +46,6 @@ public class HashTableTest {
 
         Assert.assertEquals("521-1234", hashTable.get("John Smith"));
         Assert.assertEquals("521-9655", hashTable.get("Sandra Dee"));
+        Assert.assertEquals(null, hashTable.get("Tim Lee"));
     }
 }
