@@ -25,7 +25,7 @@ public class RecrusionTest {
     @Test
     public void StripLeadingZeros() {
         Assert.assertEquals("1", recursion.stripZeros("0001"));
-        Assert.assertEquals("11", recursion.stripZeros("0011"));
+        Assert.assertEquals("11", recursion.stripZeros("00011"));
         Assert.assertEquals("1989", recursion.stripZeros("00001989"));
         Assert.assertEquals("VOD", recursion.stripZeros("VOD"));
     }
