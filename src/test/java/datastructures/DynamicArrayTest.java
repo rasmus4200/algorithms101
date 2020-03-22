@@ -35,7 +35,20 @@ public class DynamicArrayTest {
     }
 
     @Test
-    public void Delete() {
+    public void DeleteFirst() {
+        array.add("a");
+        array.add("b");
+        array.add("c");
+
+        array.delete(0);
+
+        Assert.assertEquals(2, array.size());
+        Assert.assertEquals("b", array.get(0));
+        Assert.assertEquals("c", array.get(1));
+    }
+
+    @Test
+    public void DeleteMiddle() {
         array.add("a");
         array.add("b");
         array.add("c");
@@ -59,6 +72,28 @@ public class DynamicArrayTest {
         Assert.assertEquals("a", array.get(0));
         Assert.assertEquals("b", array.get(1));
         Assert.assertEquals(null, array.get(2));
+    }
+
+    @Test
+    public void DeleteLastArraySize1() {
+        array.add("a");
+
+        array.delete(0);
+
+        Assert.assertEquals(0, array.size());
+        Assert.assertEquals(null, array.get(0));
+    }
+
+    @Test
+    public void DeleteLastArraySize2() {
+        array.add("a");
+        array.add("b");
+
+        array.delete(1);
+
+        Assert.assertEquals(1, array.size());
+        Assert.assertEquals("a", array.get(0));
+        Assert.assertEquals(null, array.get(1));
     }
 
     @Test
