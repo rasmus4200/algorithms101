@@ -94,12 +94,16 @@ public class DynamicArray<String> {
         for (int j = index; j < size - 1; j++) {
             data[j] = data[j + 1];
         }
-        size--;
 
-        // Clear if last element in array
-        if (index == size) {
+        // Clear last element of array
+
+        if (index == size) { // index is last element
             data[index] = null;
+        } else {
+            data[size - 1] = null; // index not last element
         }
+
+        size--;
     }
 
     public boolean isEmpty() {
