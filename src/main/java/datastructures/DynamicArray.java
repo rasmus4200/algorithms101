@@ -96,12 +96,7 @@ public class DynamicArray<String> {
         }
 
         // Clear last element of array
-
-        if (index == size) { // index is last element
-            data[index] = null;
-        } else {
-            data[size - 1] = null; // index not last element
-        }
+        data[size - 1] = null;
 
         size--;
     }
