@@ -147,4 +147,49 @@ public class FaceBookInterviewTest {
         node1.inOrderTraversal();
     }
 
+    @Test
+    public void BinaryTreeDeeper() {
+
+        //          5
+        //         / \
+        //        3   7
+        //       / \  /\
+        //      2  4 6  8
+
+        Node node5 = new Node(5);
+        Node node3 = new Node(3);
+        Node node7 = new Node(7);
+        Node node2 = new Node(2);
+        Node node4 = new Node(4);
+        Node node6 = new Node(6);
+        Node node8 = new Node(8);
+
+        node5.left = node3;
+        node5.right = node7;
+
+        node3.left = node2;
+        node3.right = node4;
+
+        node7.left = node6;
+        node7.right = node8;
+
+        // Copy
+        Node newNode5 = node5.copy();
+
+        Assert.assertEquals(newNode5.key, node5.key);
+        Assert.assertEquals(newNode5.left.key, node5.left.key);
+        Assert.assertEquals(newNode5.right.key, node5.right.key);
+
+        // InOrderTraversal
+        node5.inOrderTraversal();
+        newNode5.inOrderTraversal();
+
+        // modify 7 to point to 9 instead of 8
+        Node node9 = new Node(9);
+        node7.right = node9;
+
+        // Verify copied node wasn't affected - and still points to 8
+        Assert.assertEquals(newNode5.right.right.key, 8);
+    }
+
 }
