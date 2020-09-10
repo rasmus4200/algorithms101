@@ -80,12 +80,12 @@ public class FaceBookInterviewTest {
         public Node copy() {
             Node newNode = new Node(key);
 
-            if (this.left != null) {
-                newNode.left = this.left.copy();
+            if (left != null) {
+                newNode.left = left.copy();
             }
 
-            if (this.right != null) {
-                newNode.right = this.right.copy();
+            if (right != null) {
+                newNode.right = right.copy();
             }
 
             return newNode;
