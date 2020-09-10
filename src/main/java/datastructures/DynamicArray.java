@@ -21,7 +21,11 @@ public class DynamicArray<String> {
     }
 
     public void set(int index, String value) {
-        data[index] = value;
+        if (index <= size) {
+            data[index] = value;
+        } else {
+            throw new IndexOutOfBoundsException("Index is too big!");
+        }
     }
 
     public void insert(int index, String value) {
