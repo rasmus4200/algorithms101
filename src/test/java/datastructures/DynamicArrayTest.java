@@ -102,4 +102,5 @@ public class DynamicArrayTest {
         array.delete(0);
         Assert.assertFalse(array.Contains("a"));
     }
+
 }
