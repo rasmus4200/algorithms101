@@ -58,4 +58,11 @@ public class MaxIntHeapTest {
         Assert.assertEquals(7, maxHeap.extractMax());
     }
 
+    @Test
+    public void Insert35() {
+        System.out.println("9/2 = " + 9 / 2);
+        System.out.println("7/2 = " + 7 / 2);
+
+    }
+
 }

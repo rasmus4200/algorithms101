@@ -216,4 +216,33 @@ public class BinarySearchTree {
         System.out.println(" / \\  / \\");
         System.out.println(rootLeftLeftKey + "  " + rootLeftRightKey + " " + rootRightLeftKey + "   " + rootRightRightKey);
     }
+
+    // Bonus: This method checks to see if this node is a BST
+    boolean checkBST(Node root) {
+
+        // left smaller
+        boolean leftOK = false;
+
+        if (root.left != null) {
+            if (root.left.key < root.key) {
+                leftOK = true;
+            }
+        } else {
+            leftOK = true;
+        }
+
+        // right larger
+        boolean rightOK = false;
+
+        if (root.right != null) {
+            if (root.right.key > root.key) {
+                rightOK = true;
+            }
+        } else {
+            rightOK = true;
+        }
+
+        // get distinct check for free via <>
+        return leftOK && rightOK;
+    }
 }
