@@ -17,7 +17,7 @@ public class HashTable {
         }
     }
 
-    HashTable() {
+    public HashTable() {
         data = new HashEntry[INITIAL_SIZE];
     }
 
