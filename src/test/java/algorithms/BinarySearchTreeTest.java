@@ -72,8 +72,7 @@ public class BinarySearchTreeTest {
         bst.insert(2, "b");
         bst.insert(4, "d");
         bst.insert(7, "g");
-        bst.insert(6, "f");
-//        bst.insert(8, "h");
+        bst.insert(8, "h");
 
         bst.delete(7);
 
