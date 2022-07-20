@@ -67,7 +67,7 @@ public class Trie {
     }
 
     // Returns if the word is in the trie.
-    public boolean contains(String word) {
+    public boolean containsWord(String word) {
         TrieNode t = containsNode(word);
 
         if(t != null && t.isWholeWord)

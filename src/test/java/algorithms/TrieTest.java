@@ -16,25 +16,28 @@ public class TrieTest {
     public void SetUp() {
         trie = new Trie();
     }
-
+    
     @Test
-    public void SearchPrefix() {
-        trie.insert("tries");
-        trie.insert("trie");
-        trie.insert("tried");
-        trie.insert("try");
-
-        Assert.assertTrue(trie.contains("try"));
-        Assert.assertTrue(trie.startsWith("tr"));
-
-        trie.insert("Canada");
-        Assert.assertTrue(trie.startsWith("C"));
-        Assert.assertTrue(trie.startsWith("Ca"));
-        Assert.assertTrue(trie.startsWith("Can"));
-        Assert.assertTrue(trie.startsWith("Cana"));
-        Assert.assertTrue(trie.startsWith("Canad"));
-        Assert.assertTrue(trie.startsWith("Canada"));
-        Assert.assertTrue(trie.contains("Canada"));
+    public void StartsWith() {
+        trie.insert("Apple");
+        Assert.assertTrue(trie.startsWith("A"));
+        Assert.assertTrue(trie.startsWith("Ap"));
+        Assert.assertTrue(trie.startsWith("App"));
+        Assert.assertTrue(trie.startsWith("Appl"));
+        Assert.assertTrue(trie.startsWith("Apple"));
     }
 
+    @Test
+    public void ContainsWord() {
+        trie.insert("pot");
+        trie.insert("past");
+        trie.insert("pass");
+        trie.insert("part");
+
+        Assert.assertTrue(trie.containsWord("pot"));
+        Assert.assertTrue(trie.containsWord("past"));
+        Assert.assertTrue(trie.containsWord("pass"));
+        Assert.assertTrue(trie.containsWord("part"));
+        Assert.assertFalse(trie.containsWord("ps"));
+    }
 }
