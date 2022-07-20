@@ -16,7 +16,7 @@ public class TrieTest {
     public void SetUp() {
         trie = new Trie();
     }
-    
+
     @Test
     public void StartsWith() {
         trie.insert("Apple");

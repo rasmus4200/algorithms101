@@ -1,5 +1,8 @@
 package algorithms;
 
+// https://www.techiedelight.com/implement-trie-data-structure-java/
+// https://www.cs.usfca.edu/~galles/visualization/Trie.html
+
 import java.util.HashMap;
 import java.util.Map;
 
