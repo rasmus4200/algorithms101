@@ -34,7 +34,7 @@ public class LinkedListsTest {
     public void SumLists() {
         // Challenge: You have two numbers represented by a linked list.
         // Each node represents a single digit, in reverse order, such that the
-        // 1's digit is at the head. Write a function that adds the two numbers
+        // 1's digit is at the tail. Write a function that adds the two numbers
         // and returns the sum as a linked list.
 
         // Example
